@@ -168,7 +168,7 @@ $LAYOUT['_footer_'] = '<hr>
 
 // $LAYOUT is a combined $HEADER and $FOOTER, automatically split at the point of "{---}"
 
-$LAYOUT['home'] =  '
+$LAYOUT['homepage'] =  '
 <div class="container">
   {ALERTS}
 </div>
