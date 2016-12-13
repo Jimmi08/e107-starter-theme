@@ -21,7 +21,7 @@
 		<css file="style.css" name="Default"  />
 	</stylesheets>
 	<layouts>
-		<layout name='home' title='Homepage Option 1' default='false'>
+		<layout name='homepage' title='Homepage Option 1' default='false'>
 			<custompages>FRONTPAGE</custompages>	
 		</layout>
 		<layout name='modern_business_home' title='Homepage Option 2' />
