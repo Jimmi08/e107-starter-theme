@@ -69,7 +69,7 @@ class themeoptions_ui extends e_admin_ui
 		protected $fieldpref = array();
 		
 
-	//	protected $preftabs        = array('General', 'Other' );
+	 	protected $preftabs        = array('General', 'Contact page' );
 		protected $prefs = array(
     /*
 			'bowl_menuimage'		=> array('title'=> LAN_TO_BACKGROUNDMENU, 'tab'=>0, 'type'=>'image', 'data' => 'str', 'help'=>LAN_TO_BACKGROUNDMENU_HELP),
@@ -90,7 +90,17 @@ class themeoptions_ui extends e_admin_ui
          'size'=>'block-level
          '),
          ),         
-			'siteslogan'		=> array('title'=> 'Site Slogan', 'tab'=>0, 'type'=>'textarea', 'data' => 'str', 'help'=>''),           
+			'siteslogan'		=> array('title'=> 'Site Slogan', 'tab'=>0, 'type'=>'textarea', 'data' => 'str', 'help'=>''), 
+			
+			'contact_pageimage'		=> array('title'=> LAN_TO_PAGEIMAGE, 'tab'=>1, 'type'=>'image', 'data' => 'str', 'help'=>LAN_TO_PAGEIMAGE_HELP),         
+			'contact_googlemaps'		=> array('title'=> LAN_TO_CONTACTMAPS, 'tab'=>1, 'type'=>'textarea', 'data' => 'str', 'help'=>'', 
+			'writeParms' =>array('size'=>'block-level'), ),    
+			'contact_address'		=> array('title'=> LAN_TO_CONTACTADRESS, 'tab'=>0, 'type'=>'textarea', 'data' => 'str', 'help'=>'',
+			'writeParms' =>array('size'=>'block-level'), ), 
+			'contact_phone'		=> array('title'=> LAN_TO_CONTACTPHONE, 'tab'=>0, 'type'=>'textarea', 'data' => 'str', 'help'=>'', 
+			'writeParms' =>array('size'=>'block-level'), ), 
+			'contact_email'		=> array('title'=> LAN_TO_CONTACTEMAIL, 'tab'=>0, 'type'=>'textarea', 'data' => 'str', 'help'=>'', 
+			'writeParms' =>array('size'=>'block-level'), ),          
 		); 
 
 	
