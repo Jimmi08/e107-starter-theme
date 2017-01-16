@@ -17,7 +17,11 @@ e107::js("url", 			"https://cdn.jsdelivr.net/bootstrap/3.3.6/js/bootstrap.min.js
 e107::css('url', 'https://cdn.jsdelivr.net/bootstrap/3.3.6/css/bootstrap.min.css');
 e107::css('url',    'https://cdn.jsdelivr.net/fontawesome/4.5.0/css/font-awesome.min.css');
 
-
+//e107::js("footer", 	    'https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js', 'jquery', 2);
+//e107::js("theme", "js/bootstrap.min.js", 'jquery');
+//e107::js("theme", "js/jquery.easing.min.js", 'jquery');
+//e107::js("theme", "js/wow.js", 'jquery');
+//e107::js("theme", "js/scripts.js", 'jquery');
 
 e107::js("footer-inline", 	"$('.e-tip').tooltip({container: 'body'})"); // activate bootstrap tooltips. 
 
