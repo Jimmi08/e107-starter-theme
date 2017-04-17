@@ -39,9 +39,9 @@ define('COMMENTOFFSTRING', '');
 
 define('PRE_EXTENDEDSTRING', '<br />');
 
-/* example for set specific body class 
-define('BODYTAG', '<body class="body-class '.THEME_LAYOUT.'">');
-*/
+/* example for set specific body class  */
+//define('BODYTAG', '<body class="body-class '.THEME_LAYOUT.'">');
+
 
 /**
  * @param string $caption
@@ -58,12 +58,20 @@ function tablestyle($caption, $text, $id='', $info=array())
 	echo "<!-- tablestyle: style=".$style." id=".$id." -->\n\n";
 	
 	$type = $style;
+  
 	if(empty($caption))
 	{
 		$type = 'box';
 	}
 	
-	if($style == 'navdoc' || $style == 'none')
+  /* if no content, no display of html tags */
+	if(empty($text))
+	{
+		return '';
+	}
+  
+  /* displays only content */  
+	if($style == 'none')
 	{
 		echo $text;
 		return;
