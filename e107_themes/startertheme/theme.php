@@ -22,6 +22,11 @@ e107::library('load', 'fontawesome');
 //e107::js("theme", "js/wow.js", 'jquery');
 //e107::js("theme", "js/scripts.js", 'jquery');
 
+/* example for IE fix
+e107::js('url','https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js','','2','<!--[if lt IE 9]>','');
+e107::js('url','https://oss.maxcdn.com/respond/1.4.2/respond.min.js','','2','','<![endif]-->');
+*/
+
 e107::js("footer-inline", 	"$('.e-tip').tooltip({container: 'body'})"); // activate bootstrap tooltips. 
 
 // Legacy Stuff.
