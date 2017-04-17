@@ -39,6 +39,10 @@ define('COMMENTOFFSTRING', '');
 
 define('PRE_EXTENDEDSTRING', '<br />');
 
+/* example for set specific body class 
+define('BODYTAG', '<body class="body-class '.THEME_LAYOUT.'">');
+*/
+
 /**
  * @param string $caption
  * @param string $text
