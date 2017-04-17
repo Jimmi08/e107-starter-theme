@@ -13,9 +13,8 @@ define('VIEWPORT', 		"width=device-width, initial-scale=1.0");
 // Warning: Some bootstrap CDNs are not compiled with popup.js
 // use https if e107 is using https.
 
-e107::js("url", 			"https://cdn.jsdelivr.net/bootstrap/3.3.6/js/bootstrap.min.js", 'jquery', 2);
-e107::css('url', 'https://cdn.jsdelivr.net/bootstrap/3.3.6/css/bootstrap.min.css');
-e107::css('url',    'https://cdn.jsdelivr.net/fontawesome/4.5.0/css/font-awesome.min.css');
+e107::library('load', 'bootstrap');
+e107::library('load', 'fontawesome');
 
 //e107::js("footer", 	    'https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js', 'jquery', 2);
 //e107::js("theme", "js/bootstrap.min.js", 'jquery');
