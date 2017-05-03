@@ -28,7 +28,7 @@ define('VIEWPORT', 		"width=device-width, initial-scale=1.0");
 e107::library('load', 'bootstrap');
 e107::library('load', 'fontawesome');
 
-//e107::js("footer", 	    'https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js', 'jquery', 2);
+//e107::js("footer", 	    'https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js', 'jquery' );
 //e107::js("theme", "js/bootstrap.min.js", 'jquery');
 //e107::js("theme", "js/jquery.easing.min.js", 'jquery');
 //e107::js("theme", "js/wow.js", 'jquery');
@@ -50,6 +50,118 @@ define('COMMENTLINK', 	e107::getParser()->toGlyph('fa-comment'));
 define('COMMENTOFFSTRING', '');
 define('PRE_EXTENDEDSTRING', '<br />');
 
+
+
+// applied before every layout.
+$LAYOUT['_header_'] = '
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{SITEURL}">{BOOTSTRAP_BRANDING}</a>
+        </div>
+        <div class="navbar-collapse collapse {BOOTSTRAP_NAV_ALIGN}">
+        	{NAVIGATION=main}
+         	{BOOTSTRAP_USERNAV: placement=top}
+        </div><!--/.navbar-collapse -->
+      </div>
+    </div>
+
+  
+	
+';
+
+// applied after every layout. 
+$LAYOUT['_footer_'] = '<hr>
+{SETSTYLE=default}
+<footer>
+	<div class="container">
+		<div class="row">
+
+		</div>	 <!-- /row -->
+	</div> <!-- /container -->
+</footer>
+';
+
+
+
+// $LAYOUT is a combined $HEADER and $FOOTER, automatically split at the point of "{---}"
+
+$LAYOUT['homepage'] =  '
+<div class="container">  
+	{ALERTS} 
+</div>
+{SETSTYLE=jumbotron} 
+{WMESSAGE=force}    
+{SETSTYLE=default} 
+<div class="container">	 
+	{MENU=1} 
+	{---} 
+</div>
+<div class="container">  
+	<!-- Example row of columns -->  
+	<div class="row">    
+		{SETSTYLE=col-md-4}     
+		{MENU=2}    
+		{MENU=3}     
+		{MENU=4}   
+	</div>     
+	<div class="row">    
+		{SETSTYLE=col-md-4}     
+		{MENU=5}   
+	</div>  
+	{SETSTYLE=default}   
+	<div class="row" > 
+	  {MENU=6}  
+	</div>
+</div>
+';
+ 
+
+$LAYOUT['full'] = '  
+{SETSTYLE=default}
+<div class="container">	
+  {ALERTS}
+  {MENU=1}
+  {---}
+</div>';
+
+$LAYOUT['sidebar_right'] =  '   
+{SETSTYLE=default} 
+<div class="container">	   {ALERTS}   
+	<div class="row">    
+		<div class="col-xs-12 col-md-8">	    
+		 {---}     
+		</div>    
+		<div id="sidebar" class="col-xs-12 col-md-4">      
+			{SETSTYLE=menu}       
+			{MENU=1}       
+		</div>  
+	</div>
+</div>';
+
+$LAYOUT['sidebar_left'] =  '
+{SETSTYLE=default} 
+<div class="container">	   
+	{ALERTS}   
+	<div class="row">    
+		<div id="sidebar" class="col-xs-12 col-md-4">      
+			{SETSTYLE=menu}       
+			{MENU=1}       
+		</div>    
+		<div class="col-xs-12 col-md-8">	     
+			{---}     
+		</div>  
+	</div>
+</div>';
+
+
+ 
  
 
 /**
@@ -155,130 +267,7 @@ function tablestyle($caption, $text, $id='', $info=array())
 	
 	
 	
-}
-
-// applied before every layout.
-$LAYOUT['_header_'] = '
-<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="{SITEURL}">{BOOTSTRAP_BRANDING}</a>
-        </div>
-        <div class="navbar-collapse collapse {BOOTSTRAP_NAV_ALIGN}">
-        	{NAVIGATION=main}
-         	{BOOTSTRAP_USERNAV: placement=top}
-        </div><!--/.navbar-collapse -->
-      </div>
-    </div>
-
-  
-	
-';
-
-// applied after every layout. 
-$LAYOUT['_footer_'] = '<hr>
-{SETSTYLE=default}
-<footer>
-	<div class="container">
-		<div class="row">
-
-		</div>	 <!-- /row -->
-	</div> <!-- /container -->
-</footer>
-';
-
-
-
-// $LAYOUT is a combined $HEADER and $FOOTER, automatically split at the point of "{---}"
-
-$LAYOUT['homepage'] =  '
-<div class="container">
-  {ALERTS}
-</div>
-{SETSTYLE=jumbotron}
-{WMESSAGE=force}   
-{SETSTYLE=default}
-<div class="container">	
-{MENU=1}
-{---}
-</div>
-<div class="container">
-  <!-- Example row of columns -->
-  <div class="row">
-    {SETSTYLE=col-md-4}
-    {MENU=2}
-    {MENU=3}
-    {MENU=4}
-  </div>  
-  <div class="row">
-    {SETSTYLE=col-md-4}
-    {MENU=5}
-  </div>
-  {SETSTYLE=default}
-  <div class="row" >
-  
-  </div>
-</div>
-';
-
-//TODO Add {GALLERY_PORTFOLIO}  to portfolio_menu.php 
-$LAYOUT['modern_business_home'] =  '{SETSTYLE=none}
-{FEATUREBOX}   
-<div class="container">	
-  {ALERTS}
-  <!-- Start Menu 1 --> 
-    {MENU=10}
-    <!-- End Menu 1 --> 
-  </div>
-  <div class="section">
-    <div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-        {SETSTYLE=col-md-4}
-        {CMENU=jumbotron-menu-1}
-        {CMENU=jumbotron-menu-2}
-        {CMENU=jumbotron-menu-3}
-      </div>
-    </div>
-  </div>
-</div><!-- /.container -->
-{---}';
-
-
-$LAYOUT['full'] = '  
-{SETSTYLE=default}
-<div class="container">	
-  {ALERTS}
-  {MENU=1}
-  {---}
-</div>';
-
-$LAYOUT['sidebar_right'] =  '   
-{SETSTYLE=default}
-<div class="container">	
-  {ALERTS}
-  <div class="row">
-    <div class="col-xs-12 col-md-8">	
-    {---}
-    </div>
-    <div id="sidebar" class="col-xs-12 col-md-4">
-      {SETSTYLE=menu}
-      {MENU=1}
-      </div>
-  </div>
-</div>';
-
-$LAYOUT['sidebar_left'] =  $LAYOUT['sidebar_right'];
-
-
- 
- 
+} 
  
  
 $NEWSCAT = "\n\n\n\n<!-- News Category -->\n\n\n\n
