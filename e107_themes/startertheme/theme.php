@@ -1,18 +1,30 @@
 <?php
+
 /**
- * Bootstrap 3 Theme for e107 v2.x
+ * e107 website system
+ *
+ * Copyright (C) 2008-2017 e107 Inc (e107.org)
+ * Released under the terms and conditions of the
+ * GNU General Public License (http://www.gnu.org/licenses/gpl.txt)
+ *
+ * @file
+ * Bootstrap 3 Theme for e107 v2.x.
  */
-if (!defined('e107_INIT')) { exit; }
+ 
+
+if(!defined('e107_INIT'))
+{
+	exit;
+}
 
 define("BOOTSTRAP", 	3);
 define("FONTAWESOME", 	4);
 define('VIEWPORT', 		"width=device-width, initial-scale=1.0");
+/* example for set specific body class  */
+//define('BODYTAG', '<body class="body-class '.THEME_LAYOUT.'">');
 
 
-/* @see https://www.cdnperf.com */
-// Warning: Some bootstrap CDNs are not compiled with popup.js
-// use https if e107 is using https.
-
+// load libraries 
 e107::library('load', 'bootstrap');
 e107::library('load', 'fontawesome');
 
@@ -36,12 +48,9 @@ define('OTHERNEWS2_COLS',false); // no tables, only divs.
 define('OTHERNEWS2_LIMIT', 3); // Limit to 3. 
 define('COMMENTLINK', 	e107::getParser()->toGlyph('fa-comment'));
 define('COMMENTOFFSTRING', '');
-
 define('PRE_EXTENDEDSTRING', '<br />');
 
-/* example for set specific body class  */
-//define('BODYTAG', '<body class="body-class '.THEME_LAYOUT.'">');
-
+ 
 
 /**
  * @param string $caption
