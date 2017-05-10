@@ -28,6 +28,9 @@ define('VIEWPORT', 		"width=device-width, initial-scale=1.0");
 e107::library('load', 'bootstrap');
 e107::library('load', 'fontawesome');
 
+/* example you need this if your login page has header and footer */
+// if((strpos(e_REQUEST_URI, 'login') !== false)) {define('e_IFRAME','0');}
+
 //e107::js("footer", 	    'https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js', 'jquery' );
 //e107::js("theme", "js/bootstrap.min.js", 'jquery');
 //e107::js("theme", "js/jquery.easing.min.js", 'jquery');
