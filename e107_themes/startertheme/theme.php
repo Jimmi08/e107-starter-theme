@@ -53,7 +53,8 @@ define('COMMENTLINK', 	e107::getParser()->toGlyph('fa-comment'));
 define('COMMENTOFFSTRING', '');
 define('PRE_EXTENDEDSTRING', '<br />');
 
-
+// load translated strings
+e107::lan('theme');
 
 // applied before every layout.
 $LAYOUT['_header_'] = '
