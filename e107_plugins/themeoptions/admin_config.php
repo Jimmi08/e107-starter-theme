@@ -100,7 +100,14 @@ class themeoptions_ui extends e_admin_ui
 			'contact_phone'		=> array('title'=> LAN_TO_CONTACTPHONE, 'tab'=>0, 'type'=>'textarea', 'data' => 'str', 'help'=>'', 
 			'writeParms' =>array('size'=>'block-level'), ), 
 			'contact_email'		=> array('title'=> LAN_TO_CONTACTEMAIL, 'tab'=>0, 'type'=>'textarea', 'data' => 'str', 'help'=>'', 
-			'writeParms' =>array('size'=>'block-level'), ),          
+			'writeParms' =>array('size'=>'block-level'), ),    
+			
+		 'colorpicker_enabled' => array(
+				'title' => 'Enabled Bootstrap Colorpicker?',
+				'type' => 'boolean',
+				'data' => 'str',
+				'help' => 'Enable to load the required files to utlize the colorpicker form element.'
+			),      
 		); 
 
 	
