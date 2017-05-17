@@ -165,7 +165,22 @@ $LAYOUT['sidebar_left'] =  '
 </div>';
 
 
- 
+/**
+ * @param string $caption
+ * @example  []Heading 1
+ * @example  [Heading2] 
+ * @return empty string if correct syntax is used
+ */
+function checkcaption( $caption ) 
+{
+	// get rid of any leading and trailing spaces
+	$title = trim( $caption );
+	// check the first and last character, if [ and ] set the title to empty  - this always doesn't work because admin stuff in captions
+	if ( $title[0]== '[' && $title[strlen($title) - 1] == ']' ) $title = '';   
+	// so just put [] at the beginning of menu title
+	if ( $title[0]== '[' && $title[1] == ']' ) $title = '';  
+	return $title;
+} 
  
 
 /**
