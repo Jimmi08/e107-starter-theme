@@ -10,6 +10,8 @@ if (!getperms('P'))
 }
 
 e107::lan('themeoptions',true);
+e107::coreLan('prefs', true);
+
 
 class themeoptions_adminArea extends e_admin_dispatcher
 {
@@ -69,43 +71,38 @@ class themeoptions_ui extends e_admin_ui
 		protected $fieldpref = array();
 		
 
-	 	protected $preftabs        = array('General', 'Contact page' );
+	 	protected $preftabs        = array('General', 'Special' );
 		protected $prefs = array(
-    /*
-			'bowl_menuimage'		=> array('title'=> LAN_TO_BACKGROUNDMENU, 'tab'=>0, 'type'=>'image', 'data' => 'str', 'help'=>LAN_TO_BACKGROUNDMENU_HELP),
-      */
+         
+			'site_tag'		=> array('title'=> PRFLAN_5, 'tab'=>0, 'type'=>'text', 'data' => 'str', 'help'=>'',   'multilan'=>true, 
+			'writeParms' => array(
+         'size'=>'block-level
+         ')
+       ),
+			'site_description'		=> array('title'=> PRFLAN_6, 'tab'=>0, 'type'=>'textarea', 'data' => 'str', 'help'=>'',   'multilan'=>true, 
+			'writeParms' => array(
+         'size'=>'block-level
+         ')
+       ),       
 			'site_disclaimer'		=> array(
-         'title'=> LAN_TO_SITEDISCLAIMER_HELP, 
+         'title'=> PRFLAN_9, 
          'tab'=>0, 
-         'type'=>'text', 
+         'type'=>'textarea', 
          'data' => 'str',
-         'writeParms' => array(
-         'size'=>'block-level
-         '),
+         'multilan'=> true,
+         'writeParms' => array( 'size'=>'block-level'),
          'help'=>LAN_TO_SITEDISCLAIMER_HELP),  
-		/*	'bowl_pageimage'		=> array('title'=> LAN_TO_PAGEIMAGE, 'tab'=>0, 'type'=>'image', 'data' => 'str', 'help'=>LAN_TO_PAGEIMAGE_HELP),         
-			'bowl_logoimage'		=> array('title'=> LAN_TO_LOGOIMAGE, 'tab'=>0, 'type'=>'image', 'data' => 'str', 'help'=>LAN_TO_LOGOIMAGE_HELP), */
-			'sitetitle'		=> array('title'=> 'Site Title', 'tab'=>0, 'type'=>'text', 'data' => 'str', 'help'=>'',
-        'writeParms' => array(
-         'size'=>'block-level
-         '),
-         ),         
-			'siteslogan'		=> array('title'=> 'Site Slogan', 'tab'=>0, 'type'=>'textarea', 'data' => 'str', 'help'=>''), 
-			
-			'contact_pageimage'		=> array('title'=> LAN_TO_PAGEIMAGE, 'tab'=>1, 'type'=>'image', 'data' => 'str', 'help'=>LAN_TO_PAGEIMAGE_HELP),         
-			'contact_googlemaps'		=> array('title'=> LAN_TO_CONTACTMAPS, 'tab'=>1, 'type'=>'textarea', 'data' => 'str', 'help'=>'', 
-			'writeParms' =>array('size'=>'block-level'), ),    
-			'contact_address'		=> array('title'=> LAN_TO_CONTACTADRESS, 'tab'=>0, 'type'=>'textarea', 'data' => 'str', 'help'=>'',
-			'writeParms' =>array('size'=>'block-level'), ), 
-			'contact_phone'		=> array('title'=> LAN_TO_CONTACTPHONE, 'tab'=>0, 'type'=>'textarea', 'data' => 'str', 'help'=>'', 
-			'writeParms' =>array('size'=>'block-level'), ), 
-			'contact_email'		=> array('title'=> LAN_TO_CONTACTEMAIL, 'tab'=>0, 'type'=>'textarea', 'data' => 'str', 'help'=>'', 
-			'writeParms' =>array('size'=>'block-level'), ),    
-			
+        
+			'site_slogan'		=> array('title'=> 'Site Slogan', 'tab'=>0, 'type'=>'textarea', 'data' => 'str', 'help'=>'', 'multilan'=>true,
+				'writeParms' => array( 'size'=>'block-level'),
+				), 
+ 
 		 'colorpicker_enabled' => array(
 				'title' => 'Enabled Bootstrap Colorpicker?',
 				'type' => 'boolean',
 				'data' => 'str',
+				
+				'tab'=>1,
 				'help' => 'Enable to load the required files to utlize the colorpicker form element.'
 			),      
 		); 

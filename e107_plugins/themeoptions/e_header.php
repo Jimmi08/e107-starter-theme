@@ -15,3 +15,4 @@ if(e107::pref('themeoptions', 'colorpicker_enabled') == true)
 	e107::js('themeoptions', 'js/bootstrap-colorpicker.min.js', 'jquery');
 	e107::js('themeoptions', 'js/script.js', 'jquery');
 }
+ 

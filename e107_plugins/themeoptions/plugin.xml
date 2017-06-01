@@ -13,6 +13,10 @@
 		<link url="admin_config.php" description="" icon="" iconSmall="" icon128="" primary="true" >LAN_CONFIGURE</link>
 	</adminLinks>
 	<pluginPrefs>
-		<pref name='site_dislairmer'></pref>
+		<pref name='site_tag'></pref>
+		<pref name='site_description'></pref>
+		<pref name='site_disclaimer'></pref>		
+		<pref name='site_slogan'></pref>
+		<pref name='colorpicker_enabled'></pref>		
 	</pluginPrefs>
 </e107Plugin>
