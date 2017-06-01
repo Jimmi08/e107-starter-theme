@@ -13,13 +13,17 @@ class themeoptions_shortcodes extends e_shortcode
 
 	public $var;	
 	public $pref;  
-  
+	public $tojm_pref;
+	  
 	function __construct()
 	{
 		$this->pref = e107::getPref();
+		$this->tojm_pref = e107::pref('themeoptions');;
+		
     // needed for login shortcodes
 		$this->userReg = intval($pref['user_reg']);	
     
+   
 	}
  
   /* type:  tag (default), link */
@@ -75,60 +79,37 @@ class themeoptions_shortcodes extends e_shortcode
 		return "<input class='".$class."' type='submit' name='userlogin' value=\"".LAN_LOGIN_9."\" />";
 	}
   
-  /* class: classes list otherwise always core classes */
-    
-	function sc_theme_social_login($parm)
-	{
-    $parms = eHelper::scParams($parm);
-		$pref = e107::getPref('social_login_active');
-		$tp = e107::getParser();
-			
-		$size = empty($parm['size']) ? '3x' : $parm['size'];	
-		$class = vartrue($parms['class']) ?  $parms['class'] : 'signup-xup  btn btn-primary';
-		 	
-		if(!empty($pref))
-		{
-			$text = "";
-			$providers = e107::getPref('social_login'); 
-
-			foreach($providers as $p=>$v)
-			{
-				
-        $p = strtolower($p);
-        $itemclass = vartrue($parms['classprov']) ?  $class.' '.$parms['classprov'].$p : $class;   
-				if($v['enabled'] == 1)
-				{
-					
-				//		$text .= "<a href='".e107::getUrl()->create('system/xup/login?provider='.$p.'&back='.base64_encode(e_REQUEST_URL))."'><img class='e-tip' title='Register using your {$p} account' src='".e_IMAGE_ABS."xup/{$p}.png' alt='' /></a>";		
-				
-					$ic = strtolower($p);
-					
-					if($ic == 'live')
-					{
-						$ic = 'windows';
-					}
-					
-					// 'signup' Creates a new XUP user if not found, otherwise it logs the person in. 
-					
-					$button = (defset('FONTAWESOME') === 4) ? $tp->toGlyph('fa-'.$ic, array('size'=>$size)) : "<img class='e-tip' title='Register using your {$p} account' src='".e_IMAGE_ABS."xup/{$p}.png' alt='' />";			
-					$text .= " <a title='Sign-in using your {$p} account' role='button' class='".$itemclass."' href='".e107::getUrl()->create('system/xup/signup?provider='.$p.'&back='.base64_encode(e_REQUEST_URL))."'>".$button."</a> ";		
-				}
-				//TODO different icon options. see: http://zocial.smcllns.com/
-			}	
-			
-		//	$text .= "<hr />";
-			return $text;	
-		}	
-	}
+ 
   
-  /* type:  tag (default), link */
-  /* class: classes list or empty  example: {THEME_FPW_LINK: class=btn btn-warning} */  
-  /* defined in theme LAN LAN_TO_LOGINPAGENAME */
+  /* returns title of page for using in theme - mainly in separate header above content */
+  /* example {TOJM_PAGETITLE} */  
   
- 	function sc_theme_pagetitle($parm='')
+ 	function sc_tojm_pagetitle($parm='')
 	{
+   if(defined('e_PAGETITLE') )  { return e_PAGETITLE; }
    if(defined('PAGE_NAME') )  { return PAGE_NAME; }
    if((strpos(e_REQUEST_URI, 'login') !== false)) {return LAN_TO_LOGINPAGENAME;}
   }
+  
+  /* replace of SITETAG shortcode */
+  /* multilan option */
+  /* example {TOJM_SITETAG} */
+  
+ 	function sc_tojm_sitetag($parm='')
+	{     
+	 $sitetag = $this->tojm_pref['site_tag'][e_LANGUAGE]; 
+	 return e107::getParser()->toHTML($sitetag, false, 'emotes_off,defs');
+  }  
+  
+  /* replace of SITETAG shortcode */
+  /* multilan option */ 
+  /* example {TOJM_SITEDESCRIPTION} */
+  
+ 	function sc_tojm_sitedescription($parm='')
+	{     
+	 $sitedesc = $this->tojm_pref['site_description'][e_LANGUAGE]; 
+	 return e107::getParser()->toHTML($sitedesc, false, 'emotes_off,defs');
+  }    
+   
 }
 ?>

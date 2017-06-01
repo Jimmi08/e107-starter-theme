@@ -4,6 +4,7 @@ Just rename folder name and 2x word starter with  your theme name
 
 ## Some rules for plugins 01.06.2017
 With all my pro theme I use 3 custom plugins:
+
 **Themeoptions plugin** - actual functionality:
 - added colorpicker options
 - solves multilan problem on some core prefs
@@ -14,7 +15,7 @@ Note: I use themeprefs only for free themes or lite versions that are downloadab
 - extended contact info page
 - planned to add branches
 
-**Contentblock plugin** - actual functionality:
+**Contentblocks plugin** - actual functionality:
 - layer between content and menus
 - more easier work with section of site
 - sections groups etc.
