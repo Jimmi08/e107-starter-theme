@@ -122,9 +122,9 @@ if(false === $cached)
 	$vars = new e_vars(array('bullet' => $bullet));
 	foreach($months as $year=>$val)
 		{
-		      print_a($year);   print_a($val);
+ 
 			foreach($val as $month=>$v)
-			{        print_a($val);
+			{        
 					$vars->addData(array(
 					'active' => $index == $req_month ? " active" : '',
 					'url' => $month_links[$year][$month],
@@ -149,7 +149,7 @@ if(false === $cached)
 			$cached .= $footer;
 
 		}
-		$cached = $ns->tablerender(BLOGCAL_L1." ".$req_year, $cached, 'news_months_menu', true);
+		$cached = $ns->tablerender(BLOGCAL_L1." ".$req_year, $cached, 'news_archive_menu', true);
 	}
 	e107::getCache()->set($cString, $cached);
 }
