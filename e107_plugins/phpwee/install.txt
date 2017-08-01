@@ -1,21 +1,26 @@
 
+in class.php
+cca line 2643 in function send() 
+before line
+if($this->compress_output !== false)
 
 /* production */
-    if(e107::isInstalled('phpwee') && e107::pref('phpwee', 'active') && USER_AREA) {
-		 	$minified = PHPWee\Minify::html($this->content);			 	 
-			$this->content = $minified;
-			$this->length = strlen($this->content);
-		} 
+if(e107::isInstalled('phpwee') && e107::pref('phpwee', 'active') && USER_AREA) {
+ 	$minified = PHPWee\Minify::html($this->content);			 	 
+	$this->content = $minified;
+	$this->length = strlen($this->content);
+} 
 		
 /* development */
-		
-	  if(e107::isInstalled('phpwee') && e107::pref('phpwee', 'active') && USER_AREA) {
-		 	$minified = PHPWee\Minify::html($this->content);	
-		 	if(e107::pref('phpwee', 'test') && $this->compress_output == false) {
-		 	 $before = $this->content; 
-		   echo print_performance_graph("The Code Project",$minified,$before);
-			}
-			$this->content = $minified;
-		} 
+ 		
+if(e107::isInstalled('phpwee') && e107::pref('phpwee', 'active') && USER_AREA) {
+ 	$minified = PHPWee\Minify::html($this->content);	
+ 	if(e107::pref('phpwee', 'results') ) {   
+ 	 $before = $this->content; 
+   echo print_performance_graph("The Code Project",$minified,$before);
+	}
+	$this->content = $minified;
+  $this->length = strlen($this->content);
+} 
 		
 		

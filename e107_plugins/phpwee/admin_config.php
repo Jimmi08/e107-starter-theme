@@ -9,18 +9,18 @@ if (!getperms('P'))
 	exit;
 }
 
-// e107::lan('pwpwee',true);
+// e107::lan('phpwee',true);
 
 
-class pwpwee_adminArea extends e_admin_dispatcher
+class phpwee_adminArea extends e_admin_dispatcher
 {
 
 	protected $modes = array(	
 	
 		'main'	=> array(
-			'controller' 	=> 'pwpwee_ui',
+			'controller' 	=> 'phpwee_ui',
 			'path' 			=> null,
-			'ui' 			=> 'pwpwee_form_ui',
+			'ui' 			=> 'phpwee_form_ui',
 			'uipath' 		=> null
 		),
 		
@@ -44,12 +44,12 @@ class pwpwee_adminArea extends e_admin_dispatcher
 
 
 				
-class pwpwee_ui extends e_admin_ui
+class phpwee_ui extends e_admin_ui
 {
 			
 		protected $pluginTitle		= 'phpwee-php-minifier';
-		protected $pluginName		= 'pwpwee';
-	//	protected $eventName		= 'pwpwee-'; // remove comment to enable event triggers in admin. 		
+		protected $pluginName		= 'phpwee';
+	//	protected $eventName		= 'phpwee-'; // remove comment to enable event triggers in admin. 		
 		protected $table			= '';
 		protected $pid				= '';
 		protected $perPage			= 10; 
@@ -74,8 +74,8 @@ class pwpwee_ui extends e_admin_ui
 
 	//	protected $preftabs        = array('General', 'Other' );
 		protected $prefs = array(
-			'active'		=> array('title'=> 'Active', 'tab'=>0, 'type'=>'bool', 'data' => 'int', 'help'=>''),
-			'test'		=> array('title'=> 'Display results', 'tab'=>0, 'type'=>'bool', 'data' => 'int', 'help'=>''),
+			'active'		=> array('title'=> 'Active', 'tab'=>0, 'type'=>'bool', 'data' => 'str', 'help'=>''),
+			'results'		=> array('title'=> 'Display results', 'tab'=>0, 'type'=>'bool', 'data' => 'str', 'help'=>''),
 
 		); 
 	
@@ -137,13 +137,13 @@ class pwpwee_ui extends e_admin_ui
 				
 
 
-class pwpwee_form_ui extends e_admin_form_ui
+class phpwee_form_ui extends e_admin_form_ui
 {
 
 }		
 		
 		
-new pwpwee_adminArea();
+new phpwee_adminArea();
 
 require_once(e_ADMIN."auth.php");
 e107::getAdminUI()->runPage();
