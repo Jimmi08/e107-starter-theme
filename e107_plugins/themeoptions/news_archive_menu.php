@@ -112,7 +112,7 @@ if(false === $cached)
    $months[$xyear][$xmonth] = 1;
 	}
 
-  echo "som tu";
+  
 	e107::getDebug()->log($month_links);
 
 	// go over the link array and create the option fields
