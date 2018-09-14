@@ -13,7 +13,7 @@ $NAVIGATION_TEMPLATE['main']['start'] = '<ul class="nav navbar-nav nav-main">';
 // Main Link
 $NAVIGATION_TEMPLATE['main']['item'] = '
 	<li>
-		<a  role="button" href="{LINK_URL}"{LINK_OPEN} title="{LINK_DESCRIPTION}">
+		<a  role="button" href="{LINK_URL}"{LINK_OPEN} title="{LINK_NAME} {LINK_DESCRIPTION}">
 		 {LINK_ICON}{LINK_NAME} 
 		</a> 
 	</li>
@@ -22,7 +22,7 @@ $NAVIGATION_TEMPLATE['main']['item'] = '
 // Main Link - active state
 $NAVIGATION_TEMPLATE['main']['item_active'] = '
 	<li class="active">
-		<a class="e-tip" role="button"  data-target="#" href="{LINK_URL}"{LINK_OPEN} title="{LINK_DESCRIPTION}">
+		<a class="e-tip" role="button"  data-target="#" href="{LINK_URL}"{LINK_OPEN} title="{LINK_NAME} {LINK_DESCRIPTION}">
 		 {LINK_ICON} {LINK_NAME}
 		</a>
 	</li>
@@ -31,7 +31,7 @@ $NAVIGATION_TEMPLATE['main']['item_active'] = '
 // Main Link which has a sub menu. 
 $NAVIGATION_TEMPLATE['main']['item_submenu'] = '
 	<li class="dropdown {LINK_IDENTIFIER}">
-		<a class="dropdown-toggle"  role="button" data-toggle="dropdown" data-target="#" href="{LINK_URL}" title="{LINK_DESCRIPTION}">
+		<a class="dropdown-toggle"  role="button" data-toggle="dropdown" data-target="#" href="{LINK_URL}" title="{LINK_NAME} {LINK_DESCRIPTION}">
 		 {LINK_ICON}{LINK_NAME} 
 		 <span class="caret"></span>
 		</a> 
