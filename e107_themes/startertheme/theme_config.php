@@ -2,22 +2,18 @@
 
 if (!defined('e107_INIT')) { exit; }
 
-// Dummy Theme Configuration File.
 class theme_config implements e_theme_config
 {
-
 	function config()
 	{
-		// v2.1.4 format.
-
 		$fields = array(
-			 
+			'sitelogo_basic'  	  => array('title' => 'Classic site logo (white background)', 'type'=>'image', 'help'=>''),
+			'sitelogo_white'      => array('title' => 'White site logo (dark background)', 'type'=>'image', 'help'=>''),
+			'sitelogo_colored'    => array('title' => 'Colored site logo', 'type'=>'image', 'help'=>''),		
  		);
 
 		return $fields;
- 
 	}
-
 	function help()
 	{
 	 	return '';
