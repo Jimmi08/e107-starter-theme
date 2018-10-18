@@ -32,11 +32,20 @@ e107::library('load', 'fontawesome');
 // if((strpos(e_REQUEST_URI, 'login') !== false)) {define('e_IFRAME','0');}
 
 
+/* example load custom css */
+//e107::css("theme", "css/style.css");
+
+/* example load google fonts */
+//e107::css("url", "//fonts.googleapis.com/css?family=Roboto:700,500,300,100italic,100,400");
+
+
 /* example when you need different assets for diffent layout 
 if(THEME_LAYOUT == 'homepage') {
 	e107::js("theme", "js/wow.js", 'jquery');
 }
 */
+
+
 
 //e107::js("footer", 	    'https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js', 'jquery' );
 //e107::js("theme", "js/bootstrap.min.js", 'jquery');
@@ -296,25 +305,56 @@ function tablestyle($caption, $text, $id='', $info=array())
 } 
  
  
-$NEWSCAT = "\n\n\n\n<!-- News Category -->\n\n\n\n
-	<div style='padding:2px;padding-bottom:12px'>
-	<div class='newscat_caption'>
-	{NEWSCATEGORY}
-	</div>
-	<div style='width:100%;text-align:left'>
-	{NEWSCAT_ITEM}
-	</div>
-	</div>
-";
+// News item styling
+$NEWSSTYLE = '
+{NEWSTITLE}
+{NEWSAUTHOR}
+{NEWSDATE=short}
+{NEWSIMAGE}
+{NEWSBODY} {EXTENDED}
 
+';
 
-$NEWSCAT_ITEM = "\n\n\n\n<!-- News Category Item -->\n\n\n\n
-		<div style='width:100%;display:block'>
-		<table style='width:100%'>
-		<tr><td style='width:2px;vertical-align:middle'>&#8226;&nbsp;</td>
-		<td style='text-align:left;height:10px'>
-		{NEWSTITLELINK}
-		</td></tr></table></div>
-";
+// Comment Styling
+$COMMENTSTYLE = '
+{AVATAR} 
+{USERNAME}
+{REPLY}
+{TIMEDATE}
+{COMMENT} 
+';
+
+// news.php?cat.1
+$NEWSLISTSTYLE = '
+{NEWSTITLE}
+{NEWSDATE=short}
+{NEWSAUTHOR}
+{NEWSIMAGE}
+{NEWSBODY} 
+{EXTENDED}
+{EMAILICON} 
+{PRINTICON}
+{PDFICON}
+{ADMINOPTIONS}
+{NEWSCOMMENTS}
+';
+
+$NEWSARCHIVE ='
+{ARCHIVE_BULLET}
+{ARCHIVE_LINK}
+{ARCHIVE_AUTHOR}
+{ARCHIVE_DATESTAMP}
+{ARCHIVE_CATEGORY}
+';
+//Render news categories on the bottom of the page
+$NEWSCAT = '
+{NEWSCATEGORY}
+{NEWSCAT_ITEM}
+';
+//Loop for news items in category
+$NEWSCAT_ITEM = '
+{NEWSTITLELINK}
+    
+';
 
 ?>
