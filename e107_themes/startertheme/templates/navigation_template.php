@@ -10,7 +10,7 @@
 // TEMPLATE FOR {NAVIGATION=main}
 $NAVIGATION_TEMPLATE['main']['start'] = '<ul class="nav navbar-nav nav-main">';
 
-// Main Link
+// Main Link single link, no children
 $NAVIGATION_TEMPLATE['main']['item'] = '
 	<li>
 		<a  role="button" href="{LINK_URL}"{LINK_OPEN} title="{LINK_NAME} {LINK_DESCRIPTION}">
@@ -19,7 +19,7 @@ $NAVIGATION_TEMPLATE['main']['item'] = '
 	</li>
 ';
 
-// Main Link - active state
+// Main Link - active state  single link, no children
 $NAVIGATION_TEMPLATE['main']['item_active'] = '
 	<li class="active">
 		<a class="e-tip" role="button"  data-target="#" href="{LINK_URL}"{LINK_OPEN} title="{LINK_NAME} {LINK_DESCRIPTION}">
@@ -57,14 +57,14 @@ $NAVIGATION_TEMPLATE['main']['submenu_start'] = '
 		<ul class="dropdown-menu submenu-start submenu-level-{LINK_DEPTH}" role="menu" >
 ';
 
-// Sub menu Link 
+// Sub menu Link, last item of any submenu 
 $NAVIGATION_TEMPLATE['main']['submenu_item'] = '
 			<li role="menuitem" class="link-depth-{LINK_DEPTH}">
 				<a href="{LINK_URL}"{LINK_OPEN}>{LINK_ICON}{LINK_NAME}</a>
 			</li>
 ';
 
-// Sub menu Link - active state
+// Sub menu Link - active state, last item of any submenu
 $NAVIGATION_TEMPLATE['main']['submenu_item_active'] = '
 			<li role="menuitem" class="active link-depth-{LINK_DEPTH}">
 				<a href="{LINK_URL}"{LINK_OPEN}>{LINK_ICON}{LINK_NAME}</a>
@@ -72,7 +72,7 @@ $NAVIGATION_TEMPLATE['main']['submenu_item_active'] = '
 ';
 $NAVIGATION_TEMPLATE['main']['submenu_end'] = '</ul>';
 
-// Sub menu
+// Sub menu as grandparent - 2 levels of children
 $NAVIGATION_TEMPLATE['main']['submenu_lowerstart'] = '
 		<ul class="dropdown-menu submenu-start lower submenu-level-{LINK_DEPTH}" role="menu" >
 ';
