@@ -86,14 +86,25 @@ $LAYOUT['_header_'] = '
 
 // applied after every layout. 
 $LAYOUT['_footer_'] = '<hr>
-{SETSTYLE=default}
-<footer>
-	<div class="container">
-		<div class="row">
-
-		</div>	 <!-- /row -->
-	</div> <!-- /container -->
-</footer>
+{SETSTYLE=footer}
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <h1 class="title">{SITENAME}</h1>
+          </div>
+          <div class="col-md-3">
+            {NAVIGATION: type=main&layout=footer}
+          </div>
+          <div class="col-md-3">
+             {NAVIGATION: type=footer&layout=footer}
+          </div>
+          <div class="col-md-3">
+            {XURL_ICONS: template=footer}
+          </div>
+        </div>
+      </div>
+    </footer>
 ';
 
 
