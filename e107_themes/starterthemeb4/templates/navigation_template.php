@@ -69,6 +69,62 @@ $NAVIGATION_TEMPLATE['main']['submenu_lowerstart'] = '
 		<ul class="dropdown-menu submenu-start lower submenu-level-{LINK_DEPTH}" role="menu" >
 ';
  
+// TEMPLATE FOR {NAVIGATION=sidebar}
+
+$NAVIGATION_TEMPLATE['sidebar']['start'] 				= '<ul class="nav">
+														';
+
+$NAVIGATION_TEMPLATE['sidebar']['item'] 				= '<li class="nav-item">
+<a class="nav-link" href="{LINK_URL}"{LINK_OPEN} title="{LINK_DESCRIPTION}">{LINK_ICON}{LINK_NAME}</a></li>
+														';
+$NAVIGATION_TEMPLATE['sidebar']['item_active'] 		= '<li class="nav-item active"{LINK_OPEN}>
+<a class="nav-link active" href="{LINK_URL}" title="{LINK_DESCRIPTION}">{LINK_ICON}{LINK_NAME}</a></li>';
+
+
+$NAVIGATION_TEMPLATE['sidebar']['item_submenu'] 		= '
+<li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#link-{LINK_ID}">
+              {LINK_ICON}
+              <p> {LINK_NAME}
+                <b class="caret"></b>
+              </p>
+            </a>
+            <div class="collapse" id="link-{LINK_ID}">{LINK_SUB}</div>
+</li>';
+ 
+$NAVIGATION_TEMPLATE['sidebar']['item_submenu_active'] 		= '
+<li class="nav-item active">
+            <a class="nav-link" data-toggle="collapse" href="#link-{LINK_ID}" aria-expanded="true">
+              {LINK_ICON}
+              <p> {LINK_NAME}
+                <b class="caret"></b>
+              </p>
+            </a>
+            <div class="collapse show" id="link-{LINK_ID}">{LINK_SUB}</div>
+</li>';
+
+$NAVIGATION_TEMPLATE['sidebar']['end'] 				= '</ul>
+														';
+
+$NAVIGATION_TEMPLATE['sidebar']['submenu_start'] 		= '<ul class="nav">';
+
+$NAVIGATION_TEMPLATE['sidebar']['submenu_item']		= '
+<li class="nav-item" ><a class="nav-link"  href="{LINK_URL}"{LINK_OPEN}>{LINK_ICON}{LINK_NAME}</a></li>';
+
+$NAVIGATION_TEMPLATE['sidebar']['submenu_item_active']		= '
+<li class="nav-item active" ><a class="nav-link"  href="{LINK_URL}"{LINK_OPEN}>{LINK_ICON}{LINK_NAME}</a></li>';
+
+$NAVIGATION_TEMPLATE['sidebar']['submenu_loweritem'] = '
+			<li role="menuitem"  class="nav-item">
+				<a class="nav-link"  href="{LINK_URL}"{LINK_OPEN}>{LINK_ICON}{LINK_NAME}</a>
+				{LINK_SUB}
+			</li>
+';
+
+$NAVIGATION_TEMPLATE['side']['submenu_loweritem_active'] = '<li class="nav-item active"><a class="nav-link"  href="{LINK_URL}">{LINK_ICON}{LINK_NAME}</a></li>';
+
+$NAVIGATION_TEMPLATE['side']['submenu_end'] 		= '</ul>';
+
 
 
 // TEMPLATE FOR {NAVIGATION=side}

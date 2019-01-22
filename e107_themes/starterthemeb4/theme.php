@@ -70,6 +70,10 @@ define('PRE_EXTENDEDSTRING', '<br />');
 // load translated strings
 e107::lan('theme');
 
+//use main sitelinks in sidebar !layout parameter, not template
+// {NAVIGATION: type=main&layout=sidebar}
+ 
+
 // applied before every layout.
 $LAYOUT['_header_'] = '
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
