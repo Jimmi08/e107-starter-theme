@@ -17,20 +17,16 @@ if(!defined('e107_INIT'))
 	exit;
 }
 
-define("BOOTSTRAP", 	3);
+define("BOOTSTRAP", 	4);
 define("FONTAWESOME", 	4);
-define('VIEWPORT', 		"width=device-width, initial-scale=1.0");
+define('VIEWPORT', 		"width=device-width, initial-scale=1, shrink-to-fit=no");
 /* example for set specific body class  */
 //define('BODYTAG', '<body class="body-class '.THEME_LAYOUT.'">');
 
 
-if(!defined('e_SEARCH')) {  
-  define('e_SEARCH', e_HTTP.'search.php');
-}
-
-// load libraries 
-e107::library('load', 'bootstrap');
-e107::library('load', 'fontawesome');
+// load libraries  see theme.xml if any problem, use local copy
+//e107::library('load', 'bootstrap');
+//e107::library('load', 'fontawesome');
 
 /* example you need this if your login page has header and footer */
 // if((strpos(e_REQUEST_URI, 'login') !== false)) {define('e_IFRAME','0');}
@@ -48,9 +44,7 @@ if(THEME_LAYOUT == 'homepage') {
 	e107::js("theme", "js/wow.js", 'jquery');
 }
 */
-
-
-
+ 
 //e107::js("footer", 	    'https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js', 'jquery' );
 //e107::js("theme", "js/bootstrap.min.js", 'jquery');
 //e107::js("theme", "js/jquery.easing.min.js", 'jquery');
@@ -78,38 +72,39 @@ e107::lan('theme');
 
 // applied before every layout.
 $LAYOUT['_header_'] = '
-<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="{SITEURL}">{BOOTSTRAP_BRANDING}</a>
-        </div>
-        <div class="navbar-collapse collapse {BOOTSTRAP_NAV_ALIGN}">
-        	{NAVIGATION=main}
-         	{BOOTSTRAP_USERNAV: placement=top}
-        </div><!--/.navbar-collapse -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="{SITEURL}">{SITENAME}</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" 
+			aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        {NAVIGATION=main}
       </div>
-    </div>
-
-  
-	
+    </nav>
 ';
 
 // applied after every layout. 
 $LAYOUT['_footer_'] = '<hr>
-{SETSTYLE=default}
-<footer>
-	<div class="container">
-		<div class="row">
-
-		</div>	 <!-- /row -->
-	</div> <!-- /container -->
-</footer>
+{SETSTYLE=footer}
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <h1 class="title">{SITENAME}</h1>
+          </div>
+          <div class="col-md-3">
+            {NAVIGATION: type=main&layout=footer}
+          </div>
+          <div class="col-md-3">
+             {NAVIGATION: type=footer&layout=footer}
+          </div>
+          <div class="col-md-3">
+            {XURL_ICONS: template=footer}
+          </div>
+        </div>
+      </div>
+    </footer>
 ';
 
 
@@ -121,6 +116,7 @@ $LAYOUT['homepage'] =  '
 	{ALERTS} 
 </div>
 {SETSTYLE=jumbotron} 
+ 
 {WMESSAGE=force}    
 {SETSTYLE=default} 
 <div class="container">	 
@@ -202,6 +198,16 @@ function checkcaption( $caption )
 	return $title;
 } 
  
+/* moved here from theme shortcodes 
+it's needed because W3C validation
+they are added by tinymce
+*/ 
+function remove_ptags($text='')
+{
+    $text =  str_replace(array("<!-- bbcode-html-start --><p>","</p><!-- bbcode-html-end -->"), "", $text);
+    return $text; 
+}
+
 
 /**
  * @param string $caption
@@ -239,16 +245,14 @@ function tablestyle($caption, $text, $id='', $info=array())
 	
 	if($style == 'jumbotron')
 	{
-		echo '<div class="jumbotron">
-      	<div class="container">';
-        	if(!empty($caption))
-	        {
-	            echo '<h1>'.$caption.'</h1>';
-	        }
-        echo '
-        	'.$text.'
-      	</div>
-    	</div>';	
+	if(!empty($caption))  { $caption = '<h1 class="display-3">'.$caption.'</h1>'; }
+   echo '   <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <div class="container">
+          '.$caption.'
+          '.$text.' </p>
+        </div>
+      </div>';	
 		return;
 	}
 	

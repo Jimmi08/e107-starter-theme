@@ -8,21 +8,21 @@
 
  
 // TEMPLATE FOR {NAVIGATION=main}
-$NAVIGATION_TEMPLATE['main']['start'] = '<ul class="nav navbar-nav nav-main">';
+$NAVIGATION_TEMPLATE['main']['start'] = '<ul class="navbar-nav mr-auto">';
 
-// Main Link single link, no children
+// Main Link
 $NAVIGATION_TEMPLATE['main']['item'] = '
-	<li>
-		<a  role="button" href="{LINK_URL}"{LINK_OPEN} title="{LINK_NAME} {LINK_DESCRIPTION}">
+	<li class="nav-item">
+		<a class="nav-link" role="button" href="{LINK_URL}"{LINK_OPEN} title="{LINK_DESCRIPTION}">
 		 {LINK_ICON}{LINK_NAME} 
 		</a> 
 	</li>
 ';
 
-// Main Link - active state  single link, no children
+// Main Link - active state
 $NAVIGATION_TEMPLATE['main']['item_active'] = '
-	<li class="active">
-		<a class="e-tip" role="button"  data-target="#" href="{LINK_URL}"{LINK_OPEN} title="{LINK_NAME} {LINK_DESCRIPTION}">
+	<li class="nav-item active">
+		<a class="nav-link e-tip" role="button"  data-target="#" href="{LINK_URL}"{LINK_OPEN} title="{LINK_DESCRIPTION}">
 		 {LINK_ICON} {LINK_NAME}
 		</a>
 	</li>
@@ -30,10 +30,9 @@ $NAVIGATION_TEMPLATE['main']['item_active'] = '
 
 // Main Link which has a sub menu. 
 $NAVIGATION_TEMPLATE['main']['item_submenu'] = '
-	<li class="dropdown {LINK_IDENTIFIER}">
-		<a class="dropdown-toggle"  role="button" data-toggle="dropdown" data-target="#" href="{LINK_URL}" title="{LINK_NAME} {LINK_DESCRIPTION}">
+	<li class="nav-item dropdown">
+		<a class="nav-link dropdown-toggle"  aria-haspopup="true" aria-expanded="false"  data-toggle="dropdown" data-target="#" href="{LINK_URL}" title="{LINK_DESCRIPTION}">
 		 {LINK_ICON}{LINK_NAME} 
-		 <span class="caret"></span>
 		</a> 
 		{LINK_SUB}
 	</li>
@@ -41,10 +40,9 @@ $NAVIGATION_TEMPLATE['main']['item_submenu'] = '
 
 // Main Link which has a sub menu - active state.
 $NAVIGATION_TEMPLATE['main']['item_submenu_active'] = '
-	<li class="dropdown active {LINK_IDENTIFIER}">
-		<a class="dropdown-toggle" role="button" data-toggle="dropdown" data-target="#" href="{LINK_URL}">
+	<li class="nav-item dropdown active">
+		<a class="nav-link dropdown-toggle"   data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" data-target="#" href="{LINK_URL}">
 		 {LINK_ICON}{LINK_NAME}
-		 <span class="caret"></span>
 		</a>
 		{LINK_SUB}
 	</li>
@@ -53,47 +51,24 @@ $NAVIGATION_TEMPLATE['main']['item_submenu_active'] = '
 $NAVIGATION_TEMPLATE['main']['end'] = '</ul>';	
 
 // Sub menu 
-$NAVIGATION_TEMPLATE['main']['submenu_start'] = '
-		<ul class="dropdown-menu submenu-start submenu-level-{LINK_DEPTH}" role="menu" >
+$NAVIGATION_TEMPLATE['main']['submenu_start'] = '<div class="dropdown-menu" aria-labelledby="{LINK_DEPTH}">';
+
+// Sub menu Link 
+$NAVIGATION_TEMPLATE['main']['submenu_item'] = ' 
+	<a class="dropdown-item" href="{LINK_URL}"{LINK_OPEN}>{LINK_ICON}{LINK_NAME}</a>
 ';
 
-// Sub menu Link, last item of any submenu 
-$NAVIGATION_TEMPLATE['main']['submenu_item'] = '
-			<li role="menuitem" class="link-depth-{LINK_DEPTH}">
-				<a href="{LINK_URL}"{LINK_OPEN}>{LINK_ICON}{LINK_NAME}</a>
-			</li>
-';
-
-// Sub menu Link - active state, last item of any submenu
+// Sub menu Link - active state
 $NAVIGATION_TEMPLATE['main']['submenu_item_active'] = '
-			<li role="menuitem" class="active link-depth-{LINK_DEPTH}">
-				<a href="{LINK_URL}"{LINK_OPEN}>{LINK_ICON}{LINK_NAME}</a>
-			</li>
+  <a class="dropdown-item active" href="{LINK_URL}"{LINK_OPEN}>{LINK_ICON}{LINK_NAME}</a>
 ';
-$NAVIGATION_TEMPLATE['main']['submenu_end'] = '</ul>';
+$NAVIGATION_TEMPLATE['main']['submenu_end'] = '</div>';
 
-// Sub menu as grandparent - 2 levels of children
+// Sub menu
 $NAVIGATION_TEMPLATE['main']['submenu_lowerstart'] = '
 		<ul class="dropdown-menu submenu-start lower submenu-level-{LINK_DEPTH}" role="menu" >
 ';
-
-// Sub Menu Link which has a sub menu. 
-$NAVIGATION_TEMPLATE['main']['submenu_loweritem'] = '
-			<li role="menuitem" class="dropdown-submenu lower">
-				<a href="{LINK_URL}"{LINK_OPEN}>{LINK_ICON}{LINK_NAME}</a>
-				{LINK_SUB}
-			</li>
-';
-
-$NAVIGATION_TEMPLATE['main']['submenu_loweritem_active'] = '
-			<li role="menuitem" class="dropdown-submenu active">
-				<a href="{LINK_URL}"{LINK_OPEN}>{LINK_ICON}{LINK_NAME}</a>
-				{LINK_SUB}
-			</li>
-';
-
-$NAVIGATION_TEMPLATE['main']['submenu_lowerend'] = '</ul>';
-
+ 
 
 
 // TEMPLATE FOR {NAVIGATION=side}
@@ -129,18 +104,18 @@ $NAVIGATION_TEMPLATE['side']['submenu_item_active'] = '<li class="active"><a hre
 $NAVIGATION_TEMPLATE['side']['submenu_end'] 		= '';
 
 
-// Footer links.  - ie. 3 columns of links. 
+// Footer links.  
 
-$NAVIGATION_TEMPLATE["footer"]["start"] 				= "<ul class='list-unstyled nav-footer row'>\n";
-$NAVIGATION_TEMPLATE["footer"]["item"] 					= "<li class='col-md-4'><a href='{LINK_URL}'{LINK_OPEN} title=\"{LINK_DESCRIPTION}\">{LINK_ICON}{LINK_NAME}</a></li>\n";
-$NAVIGATION_TEMPLATE["footer"]["item_submenu"] 			= "<li class='nav-header col-md-4'>{LINK_ICON}{LINK_NAME}{LINK_SUB}</li>\n";
-$NAVIGATION_TEMPLATE["footer"]["item_active"] 			= "<li class='active'{LINK_OPEN}><a href='{LINK_URL}' title=\"{LINK_DESCRIPTION}\">{LINK_ICON}{LINK_NAME}</a></li>\n";
-$NAVIGATION_TEMPLATE["footer"]["end"] 					= "</ul>\n";
-$NAVIGATION_TEMPLATE["footer"]["submenu_start"] 		= "<ul class='list-unstyled'>";
-$NAVIGATION_TEMPLATE["footer"]["submenu_item"]			= "<li><a href='{LINK_URL}'{LINK_OPEN}>{LINK_ICON}{LINK_NAME}</a></li>\n";
-$NAVIGATION_TEMPLATE["footer"]["submenu_loweritem"] 	= "<li><a href='{LINK_URL}'{LINK_OPEN}>{LINK_ICON}{LINK_NAME}</a>{LINK_SUB}</li>\n";
-$NAVIGATION_TEMPLATE["footer"]["submenu_item_active"] 	= "<li class='active'><a href='{LINK_URL}'>{LINK_ICON}{LINK_NAME}</a></li>\n";
-$NAVIGATION_TEMPLATE["footer"]["submenu_end"] 			= "</ul>";
+$NAVIGATION_TEMPLATE["footer"]["start"] 				= '<ul class="nav">';
+$NAVIGATION_TEMPLATE["footer"]["item"] 					=  '<li class="nav-item"><a href="{LINK_URL}" {LINK_OPEN} class="nav-link" title="{LINK_DESCRIPTION}">{LINK_ICON}{LINK_NAME}</a></li>';
+$NAVIGATION_TEMPLATE["footer"]["item_submenu"] 			= "";
+$NAVIGATION_TEMPLATE["footer"]["item_active"] 			= '<li class="nav-item active"><a href="{LINK_URL}" {LINK_OPEN} class="nav-link" title="{LINK_DESCRIPTION}">{LINK_ICON}{LINK_NAME}</a></li>';
+$NAVIGATION_TEMPLATE["footer"]["end"] 					= '</ul>';
+$NAVIGATION_TEMPLATE["footer"]["submenu_start"] 		= '';
+$NAVIGATION_TEMPLATE["footer"]["submenu_item"]			= '';
+$NAVIGATION_TEMPLATE["footer"]["submenu_loweritem"] 	= '';
+$NAVIGATION_TEMPLATE["footer"]["submenu_item_active"] 	= '';
+$NAVIGATION_TEMPLATE["footer"]["submenu_end"] 			= '';
 
 
 $NAVIGATION_TEMPLATE['alt']['start'] 				= '<ul class="nav nav-list">
