@@ -1,0 +1,18 @@
+  
+/* New Column Class for width < 558px */
+@media (max-width: 558px) { 
+	.col-xxs-12 {
+	  position: relative;
+	  min-height: 1px;
+	  width: 100%;
+	  float: none;
+	  text-align: center;
+	 } 
+}  
+ 
+
+
+
+/* CUSTOM Responsive Styles */
+ 
+

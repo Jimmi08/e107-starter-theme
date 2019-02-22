@@ -104,7 +104,27 @@ class themeoptions_ui extends e_admin_ui
 				
 				'tab'=>1,
 				'help' => 'Enable to load the required files to utlize the colorpicker form element.'
-			),      
+			),  
+      
+			'inlinecss'		=> array(
+         'title'=> LAN_TO_THEMEOPTION_11, 
+         'tab'=>0, 
+         'type'=>'textarea', 
+         'data' => 'str',
+         'writeParms' => array(
+         'size'=>'block-level
+         '),
+         'help'=>LAN_TO_THEMEOPTION_12),  
+			'inlinejs'		=> array(
+         'title'=> LAN_TO_THEMEOPTION_13, 
+         'tab'=>1, 
+         'type'=>'textarea', 
+         'data' => 'str',
+         'writeParms' => array(
+         'size'=>'block-level
+         '),
+         'help'=>LAN_TO_THEMEOPTION_14), 		);       
+          
 		); 
 
 	

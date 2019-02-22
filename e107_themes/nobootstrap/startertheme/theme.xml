@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e107Theme name="Starter Bootstrap 3 theme" version="2.0" date="2017-04-15" compatibility="2.0">
+	<author name ="Jimako" email="jimako@jimako.sk" url="https://e107.sk" />
+	<summary>Starter Bootstrap 3 e107 theme</summary>
+	<description>a bootstrap 3 theme for the frontend</description>
+	<category>generic</category>
+	<plugins>
+		<plugin name='gallery' url='core' />
+		<plugin name='social' url='core' />
+	</plugins>
+	<keywords>
+		<word>bootstrap</word>
+		<word>clean</word>
+	</keywords>
+	<screenshots>
+		<image>preview_frontend.png</image>
+	</screenshots>
+	<stylesheets>
+		<css file="style.css" name="Default"  />
+	</stylesheets>
+	<layouts>
+		<layout name='homepage' title='Homepage Option 1' default='false'>
+			<custompages>FRONTPAGE</custompages>	
+		</layout>
+		<layout name='full' title='Full width page'  >
+            <custompages>forum</custompages>    
+		</layout>
+		<layout name='sidebar_right' title='Blog sidebar-right' default='true' >
+			<custompages>/news</custompages>	
+			<menuPresets>
+				<area id='1'>
+					<menu name='search' />
+					<menu name='news_categories' />
+					<menu name='other_news' />
+					<menu name='other_news2' />
+					<menu name='blogcalendar' />
+				</area>
+			</menuPresets>	
+		</layout>
+		<layout name='sidebar_left' title='Blog sidebar-left' default='false' >
+			<custompages>/page</custompages>	
+		</layout>
+	</layouts>
+</e107Theme>

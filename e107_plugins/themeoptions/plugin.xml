@@ -17,6 +17,8 @@
 		<pref name='site_description'></pref>
 		<pref name='site_disclaimer'></pref>		
 		<pref name='site_slogan'></pref>
-		<pref name='colorpicker_enabled'></pref>		
+		<pref name='colorpicker_enabled'></pref>
+		<pref name='inlinecss'></pref>
+		<pref name='inlinejs'></pref>			
 	</pluginPrefs>
 </e107Plugin>

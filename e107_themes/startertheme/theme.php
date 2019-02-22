@@ -24,6 +24,10 @@ define('VIEWPORT', 		"width=device-width, initial-scale=1.0");
 //define('BODYTAG', '<body class="body-class '.THEME_LAYOUT.'">');
 
 
+if(!defined('e_SEARCH')) {  
+  define('e_SEARCH', e_HTTP.'search.php');
+}
+
 // load libraries 
 e107::library('load', 'bootstrap');
 e107::library('load', 'fontawesome');
