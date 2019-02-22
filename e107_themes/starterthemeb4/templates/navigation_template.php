@@ -6,6 +6,21 @@
 * Navigation Template 
 */
 
+/*
+$NAVIGATION_TEMPLATE['main']['start'] = '';
+$NAVIGATION_TEMPLATE['main']['item'] = '';
+$NAVIGATION_TEMPLATE['main']['item_active'] = '';
+$NAVIGATION_TEMPLATE['main']['item_submenu'] = '';
+$NAVIGATION_TEMPLATE['main']['item_submenu_active'] = '';
+$NAVIGATION_TEMPLATE['main']['submenu_start'] = '';
+$NAVIGATION_TEMPLATE['main']['submenu_item'] = '';
+$NAVIGATION_TEMPLATE['main']['submenu_item_active'] = '';
+$NAVIGATION_TEMPLATE['main']['submenu_end'] = '';
+$NAVIGATION_TEMPLATE['main']['submenu_lowerstart'] = '';
+$NAVIGATION_TEMPLATE['main']['submenu_loweritem'] = '';
+$NAVIGATION_TEMPLATE['main']['submenu_loweritem_active'] = '';
+$NAVIGATION_TEMPLATE['main']['submenu_lowerend'] = '';
+*/
  
 // TEMPLATE FOR {NAVIGATION=main}
 $NAVIGATION_TEMPLATE['main']['start'] = '<ul class="navbar-nav mr-auto">';
