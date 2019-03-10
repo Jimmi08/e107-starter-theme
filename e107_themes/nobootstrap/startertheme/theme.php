@@ -27,6 +27,10 @@ define('VIEWPORT', 		"width=device-width, initial-scale=1.0");
 // load translated strings
 e107::lan('theme');
 
+
+// fix for alerts 
+e107::js("theme", "js/alert.js", 'jquery');
+
 // applied before every layout.
 $LAYOUT['_header_'] = '
 {NAVIGATION}';
