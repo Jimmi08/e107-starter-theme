@@ -20,33 +20,8 @@ if(!defined('e107_INIT'))
 define("BOOTSTRAP", 	4);
 define("FONTAWESOME", 	4);
 define('VIEWPORT', 		"width=device-width, initial-scale=1, shrink-to-fit=no");
-
-/******************************************************************************/
-/*   WORKAROUND FOR GSITEMAP PLUGIN                                           */
-/* e_PAGE is not defined,                                                     */
-/* e_CURRENT_PLUGIN is not defined here yet                                   */
-/* this is needed for possibility to style parts without templating available */
-/* be aware - use it only for content, otherwise you change header and footer too! 
-But putting this in tablerender() would execute this every time, so constant is used here 
-- using prefix jm_ to be sure avoind any conflict in future                   */
-$filename = pathinfo(e_SELF, PATHINFO_FILENAME);
-define('jm_PLUGINCLASS', $filename);  
-/******************************************************************************/
-
-/* We need THEME_LAYOUT without _ and -  **************************************/
-$search = array("_","-");
-$replace = array("","");
-$jmlayout  = str_replace($search,$replace,THEME_LAYOUT);	
-define('jm_THEME_LAYOUT', $jmlayout);  
-define('jm_THEME_THEME', e107::getPref('sitetheme'));
-/* Note:  Don't use variable $layout. it breaks things                        */
-/******************************************************************************/
-
-
 /* example for set specific body class  */
-define('BODYTAG', '<body class="'.jm_THEME_LAYOUT.' '.jm_PLUGINCLASS.'">');
-
-
+//define('BODYTAG', '<body class="body-class '.THEME_LAYOUT.'">');
 
 
 // load libraries  see theme.xml if any problem, use local copy
