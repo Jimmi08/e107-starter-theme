@@ -15,5 +15,9 @@ body {
 }
 */
  
-
+/* fix BS4 - Alerts not showing #3686  */
+.s-message.fade {
+  opacity: 1 !important;
+  visibility: inherit;
+}
  
