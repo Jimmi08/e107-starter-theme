@@ -1,0 +1,153 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<e107Export version="2.2.1" timestamp="1560609582" >
+	<database>
+	<dbTable name="news">
+		<item>
+			<field name="news_id">1</field>
+			<field name="news_title">Game Mask PC Review</field>
+			<field name="news_sef">welcome-to-e107</field>
+			<field name="news_body"><![CDATA[[html]<p>Lorem ipsum dolor sit amet, no meis semper dicunt est, petentium eloquentiam quo ne. At vero facer eam. Ex nam altera oportere, nisl natum prima id pro. Rebum augue dissentiet eum te, vel veniam eirmod option ea, at eos velit repudiare. Ius sumo dicit adolescens id, an cum efficiantur concludaturque.<br><br>Summo sensibus cum ne, et duo torquatos conceptam. No aeque elitr constituam qui. Nostro corpora nec no, diam verterem tincidunt has et. Altera accumsan urbanitas pro eu, ei assum voluptaria sed. Eam tibique nominavi consequuntur an.<br><br>Ei perfecto delicata usu, quo eius noster blandit te. Eu doctus volumus pri. Meis argumentum an nam, eos odio prima autem an. Te complectitur intellegebat pro, ius id alterum maiestatis. Ea facer accusata sed, ex illum antiopam quo.<br><br>Altera putent pri ad, in phaedrum dissentiunt per. Te eum everti dolores. Ut mea vero autem viderer, mel brute harum senserit id. Minim senserit eloquentiam duo in, sit ei justo graece petentium. Sea id homero oporteat invenire.<br><br>Pri semper dolorum ad. Cu eius repudiare eos. Eum in eleifend necessitatibus. Ne has mutat intellegebat.</p>[/html]]]></field>
+			<field name="news_extended"><![CDATA[[html]<p><strong>Lorem ipsum</strong> is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It&#039;s also called placeholder (or filler) text. It&#039;s a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography, font, or layout. Lorem ipsum is mostly a part of a Latin text by the classical author and philosopher Cicero. Its words and letters have been changed by addition or removal, so to deliberately render its content nonsensical; it&#039;s not genuine, correct, or comprehensible Latin anymore.</p>
+<p>While <strong>lorem ipsum</strong>&#039;s still resembles classical Latin, it actually has no meaning whatsoever. As Cicero&#039;s text doesn&#039;t contain the letters K, W, or Z, alien to latin, these, and others are often inserted randomly to mimic the&nbsp; typographic appearence of European languages, as are digraphs not to be found in the original.</p>[/html]]]></field>
+			<field name="news_meta_keywords">welcome,new website</field>
+			<field name="news_meta_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie augue ac enim ultricies mattis ut ac massa. Ut malesuada bibendum felis sit amet aliquam. In facilisis nunc id velit egestas luctus. Aliquam dictum dolor et eros sagittis gravida. Vivamus aliquam rutrum fermentum. Pellentesque a eros quis ipsum molestie fringilla. Integer cursus augue in tellus sodales adipiscing. Integer nec orci bibendum, accumsan mauris...</field>
+			<field name="news_datestamp">1560609476</field>
+			<field name="news_author">1</field>
+			<field name="news_category">1</field>
+			<field name="news_allow_comments">0</field>
+			<field name="news_start">0</field>
+			<field name="news_end">0</field>
+			<field name="news_class">0</field>
+			<field name="news_render_type">0,3</field>
+			<field name="news_comment_total">0</field>
+			<field name="news_summary">Summary of the news item</field>
+			<field name="news_thumbnail">{e_THEME}bootstrap4/install/750x300.jpg,,,,</field>
+			<field name="news_sticky">0</field>
+			<field name="news_template">default</field>
+		</item>
+		<item>
+			<field name="news_id">2</field>
+			<field name="news_title">Ways To Remember Something</field>
+			<field name="news_sef">ways-to-remember-something</field>
+			<field name="news_body"><![CDATA[[html]<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis</p>[/html]]]></field>
+			<field name="news_extended"></field>
+			<field name="news_meta_keywords">break,food</field>
+			<field name="news_meta_description">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis. Ut wisi enim ad minim...</field>
+			<field name="news_datestamp">1459822800</field>
+			<field name="news_author">1</field>
+			<field name="news_category">3</field>
+			<field name="news_allow_comments">0</field>
+			<field name="news_start">0</field>
+			<field name="news_end">0</field>
+			<field name="news_class">0</field>
+			<field name="news_render_type">0</field>
+			<field name="news_comment_total">0</field>
+			<field name="news_summary"></field>
+			<field name="news_thumbnail">{e_THEME}bootstrap4/install/750x300.jpg</field>
+			<field name="news_sticky">0</field>
+			<field name="news_template"></field>
+		</item>
+		<item>
+			<field name="news_id">3</field>
+			<field name="news_title">My Style Statement</field>
+			<field name="news_sef">my-style-statement</field>
+			<field name="news_body"><![CDATA[[html]<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis</p>[/html]]]></field>
+			<field name="news_extended"></field>
+			<field name="news_meta_keywords">break,food</field>
+			<field name="news_meta_description">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis. Ut wisi enim ad minim...</field>
+			<field name="news_datestamp">1560609466</field>
+			<field name="news_author">1</field>
+			<field name="news_category">3</field>
+			<field name="news_allow_comments">0</field>
+			<field name="news_start">0</field>
+			<field name="news_end">0</field>
+			<field name="news_class">0</field>
+			<field name="news_render_type">0,2,3</field>
+			<field name="news_comment_total">0</field>
+			<field name="news_summary"></field>
+			<field name="news_thumbnail">{e_THEME}bootstrap4/install/750x300.jpg,,,,</field>
+			<field name="news_sticky">0</field>
+			<field name="news_template">default</field>
+		</item>
+		<item>
+			<field name="news_id">4</field>
+			<field name="news_title">Draught Vaein Mynel</field>
+			<field name="news_sef">draught-vaein-mynel</field>
+			<field name="news_body"><![CDATA[[html]<p>Mauris sem sem, maximus ac sem auctor, cursus congue massa. Aliquam erat volutpat. Donec maximus libero turpis, sed consequat sapien semper quis aliquet posuere dui, quis elementum sem maximus quis. Mauris sem sem, maximus ac sem auctor, cursus congue massa. Aliquam erat volutpat. Donec maximus libero turpis, sed consequat sapien semper quis. Ut aliquet posuere dui, quis elementum sem maximus quis. Sed volutpat iaculis augue vitae ullamcorper.<br><br>&nbsp;&nbsp;&nbsp; Aenean dignissim, enim eu condimentum varius, ante justo consequat elit, ut consequat urna leo ut diam. Fusce suscipit urna a dolor ullamcorper, non egestas leo consectetur.<br><br><br>Nam sit amet felis libero. Nullam pharetra justo ac nisi consequat, ac dapibus dolor fermentum. Fusce dolor neque,Quisque id efficitur nibh, in volutpat erat. Morbi vel facilisis nulla, id posuere velit. Maecenas tempor lorem ut molestie malesuada. Nulla facilisi. Pellentesque fermentum, felis vel lacinia pulvinar, erat neque tincidunt sapien, sit amet varius lacus justo id nisi. Nunc euismod lacus lectus, ac ullamcorper neque lacinia eget. Phasellus et odio et justo consectetur egestas.<br><br><br>Phasellus et odio et justo consectetur egestas Donec velit quam, ultricies pharetra elit ut, pharetra vulputate libero. Proin ac justo aliquam, egestas felis vel, feugiat lectus. Nulla vel consequat lacus, ut congue nisl. Fusce sit amet ipsum sit amet dolor imperdiet congue. Vestibulum blandit vel metus vitae vehicula. Aenean fermentum ornare turpis, eget iaculis ligula molestie quis. Phasellus vulputate vestibulum mi, id aliquam odio sagittis nec. Phasellus at sagittis est, quis ullamcorper tortor. Pellentesque est libero, convallis nec sollicitudin non, congue in nulla. Nunc ac tincidunt leo, non convallis purus. Proin sed dui non metus blandit pharetra at eu ante. Suspendisse tristique mauris ac dignissim gravida. Suspendisse nec dolor non ex finibus</p>[/html]]]></field>
+			<field name="news_extended"></field>
+			<field name="news_meta_keywords">food,sport,vimeo</field>
+			<field name="news_meta_description">Mauris sem sem, maximus ac sem auctor, cursus congue massa. Aliquam erat volutpat. Donec maximus libero turpis, sed consequat sapien semper quis aliquet posuere dui, quis elementum sem maximus quis. Mauris sem sem, maximus ac sem auctor, cursus congue massa. Aliquam erat volutpat. Donec maximus libero turpis, sed consequat sapien semper quis. Ut aliquet posuere dui, quis elementum sem maximus quis. Sed volutpat...</field>
+			<field name="news_datestamp">1560609457</field>
+			<field name="news_author">1</field>
+			<field name="news_category">3</field>
+			<field name="news_allow_comments">0</field>
+			<field name="news_start">0</field>
+			<field name="news_end">0</field>
+			<field name="news_class">0</field>
+			<field name="news_render_type">0</field>
+			<field name="news_comment_total">0</field>
+			<field name="news_summary"></field>
+			<field name="news_thumbnail">{e_THEME}bootstrap4/install/750x300.jpg,,,,</field>
+			<field name="news_sticky">0</field>
+			<field name="news_template">default</field>
+		</item>
+		<item>
+			<field name="news_id">5</field>
+			<field name="news_title">Papilion Minter Savior</field>
+			<field name="news_sef">papilion-minter-savior</field>
+			<field name="news_body"><![CDATA[[html]<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>[/html]]]></field>
+			<field name="news_extended"><![CDATA[[html]<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis</p>[/html]]]></field>
+			<field name="news_meta_keywords">fashion,food,slider</field>
+			<field name="news_meta_description">Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis. Ut wisi enim ad minim...</field>
+			<field name="news_datestamp">1560609448</field>
+			<field name="news_author">1</field>
+			<field name="news_category">3</field>
+			<field name="news_allow_comments">0</field>
+			<field name="news_start">0</field>
+			<field name="news_end">0</field>
+			<field name="news_class">0</field>
+			<field name="news_render_type">0</field>
+			<field name="news_comment_total">0</field>
+			<field name="news_summary"></field>
+			<field name="news_thumbnail">{e_THEME}bootstrap4/install/750x300.jpg,{e_THEME}bootstrap4/install/750x300.jpg,,,</field>
+			<field name="news_sticky">0</field>
+			<field name="news_template">default</field>
+		</item>
+	</dbTable>
+	<dbTable name="news_category">
+		<item>
+			<field name="category_id">1</field>
+			<field name="category_name">Technology</field>
+			<field name="category_sef">technology</field>
+			<field name="category_meta_description"></field>
+			<field name="category_meta_keywords"></field>
+			<field name="category_manager">254</field>
+			<field name="category_icon">news_16.png</field>
+			<field name="category_order">0</field>
+			<field name="category_template"></field>
+		</item>
+		<item>
+			<field name="category_id">2</field>
+			<field name="category_name">Food</field>
+			<field name="category_sef">food</field>
+			<field name="category_meta_description"></field>
+			<field name="category_meta_keywords"></field>
+			<field name="category_manager">254</field>
+			<field name="category_icon"></field>
+			<field name="category_order">1</field>
+			<field name="category_template"></field>
+		</item>
+		<item>
+			<field name="category_id">3</field>
+			<field name="category_name">Fashion</field>
+			<field name="category_sef">Fashion</field>
+			<field name="category_meta_description"></field>
+			<field name="category_meta_keywords">fashion</field>
+			<field name="category_manager">254</field>
+			<field name="category_icon"></field>
+			<field name="category_order">3</field>
+			<field name="category_template"></field>
+		</item>
+	</dbTable>
+	</database>
+</e107Export>

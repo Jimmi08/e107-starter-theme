@@ -1,53 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e107Theme name="Starter Bootstrap 4 theme" version="2.1git" date="2018-09-14" compatibility="2.9">
-	<author name ="Jimako"  url="https://www.e107.sk" />
-	<summary>Starter Bootstrap 4 e107 theme</summary>
-	<description>a bootstrap 4 theme for the frontend</description>
+<e107Theme name="Bootstrap 4" version="1.1" date="2019-07-01" compatibility="2.0">
+	<author name ="e107 Inc" email="e107inc@something.com" url="http://e107.org" />
+	<summary>Bootstrap4 generic theme (under development)</summary>
+	<description>For testing only</description>
 	<category>generic</category>
 	<plugins>
-		<plugin name='gallery' url='core' />
+    <plugin name='rss_menu' url='core' />
 		<plugin name='social' url='core' />
-		<plugin name='jmelements' url='' />
-		<plugin name='jmtheme' url='' />
+		<plugin name='featurebox' url='core' />
+		<plugin name='jmcore' url='' />
 	</plugins>
 	<keywords>
 		<word>bootstrap</word>
 		<word>clean</word>
 	</keywords>
+	<libraries>
+		<library name="bootstrap" version="4" scope="all"/>
+		<library name="fontawesome" version="5" scope="all"/>
+	</libraries>
+	<stylesheets>
+		<css file="style.css" name="Default"/>
+           <css file="*" name="*"/>
+	</stylesheets>
 	<screenshots>
 		<image>preview_frontend.png</image>
 	</screenshots>
-	<stylesheets>
-		<css file="style.css" name="Default"  />
-	</stylesheets>
-	<libraries>
-		<library name="bootstrap" version="4" scope="all"/>
-		<library name="fontawesome" scope="all"/>
-	</libraries>
 	<layouts>
-		<layout name='homepage' title='Homepage Option 1' default='false'>
-			<custompages>FRONTPAGE</custompages>	
+		<layout name='home' title='Home Page' >
+			<custompages>FRONTPAGE</custompages>
 		</layout>
-		<layout name='singlecontact' title='Contact page' default='false'  >
-       <custompages>contact</custompages>    
-		</layout>		
-		<layout name='full' title='Full width page' default='true'>
-		  <custompages>page, forum</custompages>
+			<layout name='full' title='Full' >
+			<custompages>forum/ download/</custompages>
 		</layout>
-		<layout name='singlelogin' title='Login page' default='false'>
-    <custompages>login</custompages>
+		<layout name='sidebar_left' title='Sidebar (left)' />
+		<layout name='sidebar_right' title='Sidebar (right)' default='true' />
+		<layout name='singlelogin' title='Login Screen with Floating Labels' >
+			<custompages>login fpw</custompages>
 		</layout>
-		<layout name='singlesignup' title='Register page' default='false'>
-    <custompages>signup</custompages>
+			<layout name='singlesignup' title='Sign in page with a split screen format' >
+			<custompages>signup</custompages>
 		</layout>
-		<layout name='news' title='Blog page' default='false'>
-    <custompages>news</custompages>
+		<layout name='singlecontact' title='Contact page' >
+			<custompages>contact</custompages>
 		</layout>
-		<layout name='rightsidebar' title='Sidebar right' default='false'>
-       <custompages>gallery</custompages>
-    </layout>
-		<layout name='raw' title='Example page' default='false'>
-    <custompages>example</custompages>
+		<layout name='bare' title='Starter Bare template for development' >
+			<custompages>guide</custompages>
 		</layout>
 	</layouts>
+	<themePrefs>
+		<pref name='map'>Insert your own iframe code for google maps</pref>
+		<pref name='cardmenu_look'>1</pref>
+		<pref name='inlinecss'></pref>
+		<pref name='inlinejs'></pref>
+	</themePrefs>
 </e107Theme>

@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<e107Export version="2.2.2 (git)" timestamp="1560933412" >
+	<database>
+<e107Export version="2.2.2 (git)" timestamp="1562748295" >
+	<prefs>
+		<core name="sitetheme_custompages"><![CDATA[array (
+  'home' => 
+  array (
+    0 => 'FRONTPAGE',
+  ),
+  'full' => 
+  array (
+    0 => 'forum/',
+    1 => 'download/',
+  ),
+  'singlelogin' => 
+  array (
+    0 => 'login',
+    1 => 'fpw',
+  ),
+  'singlesignup' => 
+  array (
+    0 => 'signup',
+  ),
+  'singlecontact' => 
+  array (
+    0 => 'contact',
+  ),
+  'bare' => 
+  array (
+    0 => 'guide',
+  ),
+)]]></core>
+		<core name="sitetheme_deflayout">sidebar_right</core>
+		<core name="sitetheme_layouts"><![CDATA[array (
+  'home' => 
+  array (
+    '@attributes' => 
+    array (
+      'title' => 'Home Page',
+    ),
+    'custompages' => 'FRONTPAGE',
+  ),
+  'full' => 
+  array (
+    '@attributes' => 
+    array (
+      'title' => 'Full',
+    ),
+    'custompages' => 'forum/ download/',
+  ),
+  'sidebar_left' => 
+  array (
+    '@attributes' => 
+    array (
+      'title' => 'Sidebar (left)',
+    ),
+    '@value' => '',
+  ),
+  'sidebar_right' => 
+  array (
+    '@attributes' => 
+    array (
+      'title' => 'Sidebar (right)',
+      'default' => 'true',
+    ),
+    '@value' => '',
+  ),
+  'singlelogin' => 
+  array (
+    '@attributes' => 
+    array (
+      'title' => 'Login Screen with Floating Labels',
+    ),
+    'custompages' => 'login fpw',
+  ),
+  'singlesignup' => 
+  array (
+    '@attributes' => 
+    array (
+      'title' => 'Sign in page with a split screen format',
+    ),
+    'custompages' => 'signup',
+  ),
+  'singlecontact' => 
+  array (
+    '@attributes' => 
+    array (
+      'title' => 'Contact page',
+    ),
+    'custompages' => 'contact',
+  ),
+  'bare' => 
+  array (
+    '@attributes' => 
+    array (
+      'title' => 'Starter Bare template for development',
+    ),
+    'custompages' => 'guide',
+  ),
+)]]></core>
+		<core name="themecss">style.css</core>
+	</prefs>
+	<dbTable name="menus">
+		<item>
+			<field name="menu_id">1</field>
+			<field name="menu_name">featurebox_menu</field>
+			<field name="menu_location">1</field>
+			<field name="menu_order">1</field>
+			<field name="menu_class">0</field>
+			<field name="menu_pages"></field>
+			<field name="menu_path">featurebox/</field>
+			<field name="menu_layout">home</field>
+			<field name="menu_parms"></field>
+		</item>
+	</dbTable>
+	</database>
+</e107Export>

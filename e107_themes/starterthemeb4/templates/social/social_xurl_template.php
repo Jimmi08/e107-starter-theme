@@ -9,39 +9,19 @@
 	 */
 
 
+
 	/**
 	 * {XURL_ICONS} template
 	 */
-	 $SOCIAL_XURL_TEMPLATE['default']['start'] = '<ul class="socials-about">';
-	 $SOCIAL_XURL_TEMPLATE['default']['item'] = '
-   <li><a href="{XURL_ICONS_HREF}" target="_blank"  title="{XURL_ICONS_TITLE}"><i class="fa fa-{XURL_ICONS_ID}"></i></a></li>';
-	 $SOCIAL_XURL_TEMPLATE['default']['end'] = '</ul>'; 
- 
-                
-	 $SOCIAL_XURL_TEMPLATE['contact']['start'] = '<div class="social-buttons">';
-	 $SOCIAL_XURL_TEMPLATE['contact']['item'] = '
-    <a class="btn btn-social btn-simple" href="{XURL_ICONS_HREF}" target="_blank"  title="{XURL_ICONS_TITLE}"><i class="fa fa-{XURL_ICONS_ID}"></i></a> '; 
-	 $SOCIAL_XURL_TEMPLATE['contact']['end'] = '</div>';
+	 $SOCIAL_XURL_TEMPLATE['default']['start'] = '<p class="xurl-social-icons hidden-print">';
+	 $SOCIAL_XURL_TEMPLATE['default']['item'] = '<a target="_blank" href="{XURL_ICONS_HREF}" data-tooltip-position="top" class="e-tip social-icon social-{XURL_ICONS_ID}" title="{XURL_ICONS_TITLE}"><span class="fa fa-fw fa-{XURL_ICONS_ID} {XURL_ICONS_CLASS}"></span></a>';
+	 $SOCIAL_XURL_TEMPLATE['default']['end'] = '</p>';
 
- 
-   // if you need caption, use shortcode menu with  {XURL_ICONS: template=footer}    
-	/* <a target="_blank" href="https://twitter.com/creativetim" class="btn btn-icon btn-neutral btn-round btn-simple" data-toggle="tooltip" data-original-title="Follow us">
-                <i class="fab fa-twitter"></i>
-              </a> */                                            
-	 $SOCIAL_XURL_TEMPLATE['footer']['start'] = '<h3 class="title">Follow us:</h3><div class="btn-wrapper profile">';
-	 $SOCIAL_XURL_TEMPLATE['footer']['item'] = ' 
-   <a  class="btn btn-icon btn-neutral btn-round btn-simple" data-toggle="tooltip"   data-original-title="Follow us" 
-	  href="{XURL_ICONS_HREF}" target="_blank" title="{XURL_ICONS_TITLE}">
-     <i class="fab fa-{XURL_ICONS_ID}"></i>  
-   </a>
-   </li>';
-	 $SOCIAL_XURL_TEMPLATE['footer']['end'] = '</div>';
+	/**
+	 * {XURL_ICONS} template
+	 */
 	 
- 
-	 $SOCIAL_XURL_TEMPLATE['footer-small']['start'] = '  ';
-	 $SOCIAL_XURL_TEMPLATE['footer-small']['item'] = ' 
-   <a class="btn btn-social btn-{XURL_ICONS_ID} btn-simple"  href="{XURL_ICONS_HREF}" target="_blank" title="{XURL_ICONS_TITLE}">
-     <i class="fa fa-{XURL_ICONS_ID}"></i> 
-   </a>
-   ';
-	 $SOCIAL_XURL_TEMPLATE['footer-small']['end'] = ' ';	 
+	 $SOCIAL_XURL_TEMPLATE['footer']['start'] = '<div class="d-flex justify-content-center"><ul class="list-inline social-buttons">';
+	 $SOCIAL_XURL_TEMPLATE['footer']['item'] = ' 
+ <a class="btn btn-primary m-1"  title="{XURL_ICONS_TITLE}"><i class="fab fa-{XURL_ICONS_ID}"></i></a> ';
+	 $SOCIAL_XURL_TEMPLATE['footer']['end'] = '</ul></div>';

@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<e107Export version="2.2.2 (git)" timestamp="1560932841" >
+	<database>
+	<dbTable name="featurebox">
+		<item>
+			<field name="fb_id">4</field>
+			<field name="fb_title">Slide 2 Template Image Left</field>
+			<field name="fb_text"><![CDATA[[html]<p>Suspendisse ac dui purus. Cras eleifend, velit sed dapibus pharetra, elit dolor mattis tellus, ac luctus nisi massa at ligula.&nbsp;&nbsp;</p>[/html]]]></field>
+			<field name="fb_mode">0</field>
+			<field name="fb_class">0</field>
+			<field name="fb_rendertype">0</field>
+			<field name="fb_template">bootstrap_carousel_left</field>
+			<field name="fb_order">4</field>
+			<field name="fb_image">{e_THEME}bootstrap4/install/600x450.png</field>
+			<field name="fb_imageurl"></field>
+			<field name="fb_category">1</field>
+		</item>
+		<item>
+			<field name="fb_id">5</field>
+			<field name="fb_title">Slide 3 Template Image Right</field>
+			<field name="fb_text"><![CDATA[[html]<p>Suspendisse ac dui purus. Cras eleifend, velit sed dapibus pharetra, elit dolor mattis tellus, ac luctus nisi massa at ligula. Ut sagittis, neque consequat elementum convallis.</p>[/html]]]></field>
+			<field name="fb_mode">0</field>
+			<field name="fb_class">0</field>
+			<field name="fb_rendertype">0</field>
+			<field name="fb_template">bootstrap_carousel_right</field>
+			<field name="fb_order">4</field>
+			<field name="fb_image">{e_THEME}bootstrap4/install/600x450.png</field>
+			<field name="fb_imageurl"></field>
+			<field name="fb_category">1</field>
+		</item>
+		<item>
+			<field name="fb_id">1</field>
+			<field name="fb_title">Slide 1 Default Bootstrap Carousel</field>
+			<field name="fb_text"><![CDATA[[html]<p>Default Message - this is the default</p>[/html]]]></field>
+			<field name="fb_mode">0</field>
+			<field name="fb_class">0</field>
+			<field name="fb_rendertype">0</field>
+			<field name="fb_template">bootstrap_carousel_default</field>
+			<field name="fb_order">3</field>
+			<field name="fb_image">{e_THEME}bootstrap4/install/1900x1080.png</field>
+			<field name="fb_imageurl"></field>
+			<field name="fb_category">1</field>
+		</item>
+		<item>
+			<field name="fb_id">2</field>
+			<field name="fb_title">Slide 2</field>
+			<field name="fb_text"><![CDATA[[html]<p>Suspendisse ac dui purus. Cras eleifend, velit sed dapibus pharetra, elit dolor mattis tellus, ac luctus nisi massa at ligula. Ut sagittis, neque consequat elementum convallis, lorem nulla molestie arcu, eu rutrum velit quam at metus! Nullam eu eleifend magna. Praesent eget leo felis, vel euismod nibh. Morbi sem eros, pellentesque eu scelerisque id, pretium id enim. Mauris aliquet molestie dui vel ultricies. Etiam consequat quam sed tellus facilisis sollicitudin. Vivamus malesuada iaculis metus.</p>[/html]]]></field>
+			<field name="fb_mode">0</field>
+			<field name="fb_class">0</field>
+			<field name="fb_rendertype">0</field>
+			<field name="fb_template">bootstrap_carousel_default</field>
+			<field name="fb_order">4</field>
+			<field name="fb_image">{e_THEME}bootstrap4/install/1900x1080.png</field>
+			<field name="fb_imageurl"></field>
+			<field name="fb_category">1</field>
+		</item>
+		<item>
+			<field name="fb_id">3</field>
+			<field name="fb_title">Slide 3</field>
+			<field name="fb_text"><![CDATA[[html]<p>Suspendisse ac dui purus. Cras eleifend, velit sed dapibus pharetra, elit dolor mattis tellus, ac luctus nisi massa at ligula. Ut sagittis, neque consequat elementum convallis, lorem nulla molestie arcu, eu rutrum velit quam at metus! Nullam eu eleifend magna. Praesent eget leo felis, vel euismod nibh. Morbi sem eros, pellentesque eu scelerisque id, pretium id enim. Mauris aliquet molestie dui vel ultricies. Etiam consequat quam sed tellus facilisis sollicitudin. Vivamus malesuada iaculis metus.</p>[/html]]]></field>
+			<field name="fb_mode">0</field>
+			<field name="fb_class">0</field>
+			<field name="fb_rendertype">0</field>
+			<field name="fb_template">bootstrap_carousel_default</field>
+			<field name="fb_order">4</field>
+			<field name="fb_image">{e_THEME}bootstrap4/install/1900x1080.png</field>
+			<field name="fb_imageurl"></field>
+			<field name="fb_category">1</field>
+		</item>
+	</dbTable>
+	</database>
+</e107Export>

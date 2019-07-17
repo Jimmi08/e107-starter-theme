@@ -1,0 +1,48 @@
+
+<body id="page-top" class="{LAYOUT_ID}" {BODY_ONLOAD} >
+
+{---MODAL---}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="{SITEURL}">{SITENAME}</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+      {NAVIGATION=main}
+      </div>
+    </div>
+  </nav>
+ 
+
+<!-- Page Content -->
+{---LAYOUT---}
+
+<!-- Footer --> 
+{SETSTYLE=footer}	
+<footer class="footer py-4 bg-dark text-white">            	
+	<div class="container">       		
+		<div class="content">         			
+			<div class="row">           				
+				<div class="col-md-3">   <h4>Navigation</h4>{NAVIGATION: type=main&layout=alt}                    				
+				</div>           				
+				<div class="col-md-3">   <h4>Follow Us</h4>{XURL_ICONS: template=footer}                     				
+				</div>           				
+				<div class="col-md-3">   MENUAREA                     				
+				</div>           				
+				<div class="col-md-3">   MENUAREA                     				
+				</div>                 			
+			</div>       		
+		</div>       		
+		<hr>   	 
+		<div class="container">    {NAVIGATION: type=main&layout=footer} </div>
+		<div class="container">      
+			<p class="m-0 text-center text-white">{SITEDISCLAIMER}</p>
+		</div>    
+		<!-- /.container -->
+		</div>
+</footer>
+
+<!-- Javascripts and other information are automatically added below here -->
+</body> <!-- This tag is not necessary and is ignored and replaced. Left here only as a reference -->

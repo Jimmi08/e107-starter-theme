@@ -1,0 +1,639 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<e107Export version="2.2.0 (git)" timestamp="1560610261" >
+	<pluginPrefs>
+		<forum name="show_topics">1</forum>
+		<forum name="postfix">[more...]</forum>
+		<forum name="poll">255</forum>
+		<forum name="popular">10</forum>
+		<forum name="track">1</forum>
+		<forum name="eprefix">[forum]</forum>
+		<forum name="enclose">1</forum>
+		<forum name="title">Forums</forum>
+		<forum name="postspage">10</forum>
+		<forum name="hilightsticky">1</forum>
+	</pluginPrefs>
+	<database>
+	<dbTable name="forum">
+		<item>
+			<field name="forum_id">1</field>
+			<field name="forum_name">Your First Category</field>
+			<field name="forum_description">Description of your forum category.</field>
+			<field name="forum_image"></field>
+			<field name="forum_parent">0</field>
+			<field name="forum_sub">0</field>
+			<field name="forum_datestamp">0</field>
+			<field name="forum_moderators">254</field>
+			<field name="forum_threads">0</field>
+			<field name="forum_replies">0</field>
+			<field name="forum_lastpost_user">0</field>
+			<field name="forum_lastpost_user_anon"></field>
+			<field name="forum_lastpost_info"></field>
+			<field name="forum_class">0</field>
+			<field name="forum_order">50</field>
+			<field name="forum_postclass">253</field>
+			<field name="forum_threadclass">253</field>
+			<field name="forum_options"></field>
+			<field name="forum_sef">your-first-category</field>
+		</item>
+		<item>
+			<field name="forum_id">3</field>
+			<field name="forum_name">Your first forum</field>
+			<field name="forum_description">Description of your forum.</field>
+			<field name="forum_image"></field>
+			<field name="forum_parent">5</field>
+			<field name="forum_sub">0</field>
+			<field name="forum_datestamp">0</field>
+			<field name="forum_moderators">254</field>
+			<field name="forum_threads">1</field>
+			<field name="forum_replies">3</field>
+			<field name="forum_lastpost_user">2</field>
+			<field name="forum_lastpost_user_anon"></field>
+			<field name="forum_lastpost_info">1481927433.2</field>
+			<field name="forum_class">0</field>
+			<field name="forum_order">100</field>
+			<field name="forum_postclass">253</field>
+			<field name="forum_threadclass">253</field>
+			<field name="forum_options"></field>
+			<field name="forum_sef">your-first-forum</field>
+		</item>
+		<item>
+			<field name="forum_id">4</field>
+			<field name="forum_name">Your second forum</field>
+			<field name="forum_description">Description of your forum.</field>
+			<field name="forum_image"></field>
+			<field name="forum_parent">1</field>
+			<field name="forum_sub">0</field>
+			<field name="forum_datestamp">0</field>
+			<field name="forum_moderators">254</field>
+			<field name="forum_threads">3</field>
+			<field name="forum_replies">8</field>
+			<field name="forum_lastpost_user">0</field>
+			<field name="forum_lastpost_user_anon">Test by Moc</field>
+			<field name="forum_lastpost_info">1486068655.9</field>
+			<field name="forum_class">0</field>
+			<field name="forum_order">100</field>
+			<field name="forum_postclass">253</field>
+			<field name="forum_threadclass">253</field>
+			<field name="forum_options"></field>
+			<field name="forum_sef">your-second-forum</field>
+		</item>
+		<item>
+			<field name="forum_id">5</field>
+			<field name="forum_name">Your Second Category</field>
+			<field name="forum_description">Description of your forum category.</field>
+			<field name="forum_image"></field>
+			<field name="forum_parent">0</field>
+			<field name="forum_sub">0</field>
+			<field name="forum_datestamp">0</field>
+			<field name="forum_moderators">254</field>
+			<field name="forum_threads">0</field>
+			<field name="forum_replies">0</field>
+			<field name="forum_lastpost_user">0</field>
+			<field name="forum_lastpost_user_anon"></field>
+			<field name="forum_lastpost_info"></field>
+			<field name="forum_class">0</field>
+			<field name="forum_order">50</field>
+			<field name="forum_postclass">253</field>
+			<field name="forum_threadclass">253</field>
+			<field name="forum_options"></field>
+			<field name="forum_sef">your-second-category</field>
+		</item>
+		<item>
+			<field name="forum_id">6</field>
+			<field name="forum_name">Your third forum = subforum</field>
+			<field name="forum_description">Description of your subforum.</field>
+			<field name="forum_image"></field>
+			<field name="forum_parent">5</field>
+			<field name="forum_sub">3</field>
+			<field name="forum_datestamp">0</field>
+			<field name="forum_moderators">254</field>
+			<field name="forum_threads">4</field>
+			<field name="forum_replies">5</field>
+			<field name="forum_lastpost_user">2</field>
+			<field name="forum_lastpost_user_anon"></field>
+			<field name="forum_lastpost_info">1481907009.6</field>
+			<field name="forum_class">0</field>
+			<field name="forum_order">100</field>
+			<field name="forum_postclass">253</field>
+			<field name="forum_threadclass">253</field>
+			<field name="forum_options"></field>
+			<field name="forum_sef">your-third-forum</field>
+		</item>
+		<item>
+			<field name="forum_id">7</field>
+			<field name="forum_name">Your forth forum</field>
+			<field name="forum_description">Description of your forum.</field>
+			<field name="forum_image"></field>
+			<field name="forum_parent">5</field>
+			<field name="forum_sub">0</field>
+			<field name="forum_datestamp">0</field>
+			<field name="forum_moderators">254</field>
+			<field name="forum_threads">1</field>
+			<field name="forum_replies">2</field>
+			<field name="forum_lastpost_user">1</field>
+			<field name="forum_lastpost_user_anon"></field>
+			<field name="forum_lastpost_info">1481488055.1</field>
+			<field name="forum_class">0</field>
+			<field name="forum_order">100</field>
+			<field name="forum_postclass">253</field>
+			<field name="forum_threadclass">253</field>
+			<field name="forum_options"></field>
+			<field name="forum_sef">your-forth-forum</field>
+		</item>
+		<item>
+			<field name="forum_id">8</field>
+			<field name="forum_name">Your fifth forum</field>
+			<field name="forum_description">Description of your forum.</field>
+			<field name="forum_image"></field>
+			<field name="forum_parent">1</field>
+			<field name="forum_sub">0</field>
+			<field name="forum_datestamp">0</field>
+			<field name="forum_moderators">254</field>
+			<field name="forum_threads">0</field>
+			<field name="forum_replies">0</field>
+			<field name="forum_lastpost_user">0</field>
+			<field name="forum_lastpost_user_anon"></field>
+			<field name="forum_lastpost_info"></field>
+			<field name="forum_class">0</field>
+			<field name="forum_order">100</field>
+			<field name="forum_postclass">253</field>
+			<field name="forum_threadclass">253</field>
+			<field name="forum_options"></field>
+			<field name="forum_sef">your-fifth-forum</field>
+		</item>
+	</dbTable>
+	<dbTable name="forum_post">
+		<item>
+			<field name="post_id">1</field>
+			<field name="post_entry"><![CDATA[[html]<p>This is test topic</p>[/html]]]></field>
+			<field name="post_thread">1</field>
+			<field name="post_forum">7</field>
+			<field name="post_status">0</field>
+			<field name="post_datestamp">1481488055</field>
+			<field name="post_user">1</field>
+			<field name="post_edit_datestamp">0</field>
+			<field name="post_edit_user">0</field>
+			<field name="post_ip">0000:0000:0000:0000:0000:ffff:d5d7:530d</field>
+			<field name="post_user_anon"></field>
+			<field name="post_attachments"></field>
+			<field name="post_options"></field>
+		</item>
+		<item>
+			<field name="post_id">2</field>
+			<field name="post_entry"><![CDATA[[html]<p>test thread</p>[/html]]]></field>
+			<field name="post_thread">2</field>
+			<field name="post_forum">3</field>
+			<field name="post_status">0</field>
+			<field name="post_datestamp">1481489914</field>
+			<field name="post_user">0</field>
+			<field name="post_edit_datestamp">0</field>
+			<field name="post_edit_user">0</field>
+			<field name="post_ip">0000:0000:0000:0000:0000:ffff:4395:2c20</field>
+			<field name="post_user_anon"></field>
+			<field name="post_attachments"></field>
+			<field name="post_options"></field>
+		</item>
+		<item>
+			<field name="post_id">3</field>
+			<field name="post_entry"><![CDATA[[html]<p>l;kj;fljsdflkds</p>[/html]]]></field>
+			<field name="post_thread">3</field>
+			<field name="post_forum">6</field>
+			<field name="post_status">0</field>
+			<field name="post_datestamp">1481490078</field>
+			<field name="post_user">0</field>
+			<field name="post_edit_datestamp">0</field>
+			<field name="post_edit_user">0</field>
+			<field name="post_ip">0000:0000:0000:0000:0000:ffff:4395:2c20</field>
+			<field name="post_user_anon"></field>
+			<field name="post_attachments"></field>
+			<field name="post_options"></field>
+		</item>
+		<item>
+			<field name="post_id">4</field>
+			<field name="post_entry"><![CDATA[[html]<h2>What is Lorem Ipsum?</h2>
+<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#039;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>[/html]]]></field>
+			<field name="post_thread">1</field>
+			<field name="post_forum">7</field>
+			<field name="post_status">0</field>
+			<field name="post_datestamp">1481555013</field>
+			<field name="post_user">1</field>
+			<field name="post_edit_datestamp">0</field>
+			<field name="post_edit_user">0</field>
+			<field name="post_ip">0000:0000:0000:0000:0000:ffff:c3a8:3426</field>
+			<field name="post_user_anon"></field>
+			<field name="post_attachments"></field>
+			<field name="post_options"></field>
+		</item>
+		<item>
+			<field name="post_id">5</field>
+			<field name="post_entry">Čo je to Lorem Ipsum?
+
+Lorem Ipsum je fiktívny text, používaný pri návrhu tlačovín a typografie. Lorem Ipsum je štandardným výplňovým textom už od 16. storočia, keď neznámy tlačiar zobral sadzobnicu plnú tlačových znakov a pomiešal ich, aby tak vytvoril vzorkovú knihu. Prežil nielen päť storočí, ale aj skok do elektronickej sadzby, a pritom zostal v podstate nezmenený. Spopularizovaný bol v 60-tych rokoch 20.storočia, vydaním hárkov Letraset, ktoré obsahovali pasáže Lorem Ipsum, a neskôr aj publikačným softvérom ako Aldus PageMaker, ktorý obsahoval verzie Lorem Ipsum.</field>
+			<field name="post_thread">5</field>
+			<field name="post_forum">6</field>
+			<field name="post_status">0</field>
+			<field name="post_datestamp">1481653473</field>
+			<field name="post_user">0</field>
+			<field name="post_edit_datestamp">0</field>
+			<field name="post_edit_user">0</field>
+			<field name="post_ip">0000:0000:0000:0000:0000:ffff:d5d7:530d</field>
+			<field name="post_user_anon">Test</field>
+			<field name="post_attachments"></field>
+			<field name="post_options"></field>
+		</item>
+		<item>
+			<field name="post_id">6</field>
+			<field name="post_entry"><![CDATA[[html]<p><span>This is an example post</span></p>[/html]]]></field>
+			<field name="post_thread">6</field>
+			<field name="post_forum">6</field>
+			<field name="post_status">0</field>
+			<field name="post_datestamp">1481653750</field>
+			<field name="post_user">1</field>
+			<field name="post_edit_datestamp">1487188796</field>
+			<field name="post_edit_user">1</field>
+			<field name="post_ip">0000:0000:0000:0000:0000:ffff:d5d7:530d</field>
+			<field name="post_user_anon"></field>
+			<field name="post_attachments"></field>
+			<field name="post_options"></field>
+		</item>
+		<item>
+			<field name="post_id">7</field>
+			<field name="post_entry">test test test test</field>
+			<field name="post_thread">6</field>
+			<field name="post_forum">6</field>
+			<field name="post_status">0</field>
+			<field name="post_datestamp">1481906984</field>
+			<field name="post_user">0</field>
+			<field name="post_edit_datestamp">0</field>
+			<field name="post_edit_user">0</field>
+			<field name="post_ip">0000:0000:0000:0000:0000:ffff:d8ea:67e2</field>
+			<field name="post_user_anon"></field>
+			<field name="post_attachments"></field>
+			<field name="post_options"></field>
+		</item>
+		<item>
+			<field name="post_id">8</field>
+			<field name="post_entry"><![CDATA[[html]<p><span>This is an example of answer / reply</span></p>[/html]]]></field>
+			<field name="post_thread">6</field>
+			<field name="post_forum">6</field>
+			<field name="post_status">0</field>
+			<field name="post_datestamp">1481907009</field>
+			<field name="post_user">0</field>
+			<field name="post_edit_datestamp">1487188822</field>
+			<field name="post_edit_user">1</field>
+			<field name="post_ip">0000:0000:0000:0000:0000:ffff:d8ea:67e2</field>
+			<field name="post_user_anon"></field>
+			<field name="post_attachments"></field>
+			<field name="post_options"></field>
+		</item>
+		<item>
+			<field name="post_id">9</field>
+			<field name="post_entry"><![CDATA[[html]<p>test again again again</p>[/html]]]></field>
+			<field name="post_thread">7</field>
+			<field name="post_forum">4</field>
+			<field name="post_status">0</field>
+			<field name="post_datestamp">1481907304</field>
+			<field name="post_user">0</field>
+			<field name="post_edit_datestamp">0</field>
+			<field name="post_edit_user">0</field>
+			<field name="post_ip">0000:0000:0000:0000:0000:ffff:d8ea:67e2</field>
+			<field name="post_user_anon"></field>
+			<field name="post_attachments"></field>
+			<field name="post_options"></field>
+		</item>
+		<item>
+			<field name="post_id">10</field>
+			<field name="post_entry"><![CDATA[[html]<p><strong>Lorem Ipsum</strong><span> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#039;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>[/html]]]></field>
+			<field name="post_thread">8</field>
+			<field name="post_forum">4</field>
+			<field name="post_status">0</field>
+			<field name="post_datestamp">1481910978</field>
+			<field name="post_user">1</field>
+			<field name="post_edit_datestamp">0</field>
+			<field name="post_edit_user">0</field>
+			<field name="post_ip">0000:0000:0000:0000:0000:ffff:d5d7:530d</field>
+			<field name="post_user_anon"></field>
+			<field name="post_attachments"></field>
+			<field name="post_options"></field>
+		</item>
+		<item>
+			<field name="post_id">11</field>
+			<field name="post_entry">tetststst</field>
+			<field name="post_thread">8</field>
+			<field name="post_forum">4</field>
+			<field name="post_status">0</field>
+			<field name="post_datestamp">1481913490</field>
+			<field name="post_user">0</field>
+			<field name="post_edit_datestamp">0</field>
+			<field name="post_edit_user">0</field>
+			<field name="post_ip">0000:0000:0000:0000:0000:ffff:d8ea:67e2</field>
+			<field name="post_user_anon"></field>
+			<field name="post_attachments"></field>
+			<field name="post_options"></field>
+		</item>
+		<item>
+			<field name="post_id">12</field>
+			<field name="post_entry"><![CDATA[[html]<p>twetwetsfsdfds</p>[/html]]]></field>
+			<field name="post_thread">8</field>
+			<field name="post_forum">4</field>
+			<field name="post_status">0</field>
+			<field name="post_datestamp">1481913502</field>
+			<field name="post_user">0</field>
+			<field name="post_edit_datestamp">0</field>
+			<field name="post_edit_user">0</field>
+			<field name="post_ip">0000:0000:0000:0000:0000:ffff:d8ea:67e2</field>
+			<field name="post_user_anon"></field>
+			<field name="post_attachments"></field>
+			<field name="post_options"></field>
+		</item>
+		<item>
+			<field name="post_id">13</field>
+			<field name="post_entry"><![CDATA[[html]<p>dsfsdfsdfs</p>[/html]]]></field>
+			<field name="post_thread">8</field>
+			<field name="post_forum">4</field>
+			<field name="post_status">0</field>
+			<field name="post_datestamp">1481913522</field>
+			<field name="post_user">0</field>
+			<field name="post_edit_datestamp">0</field>
+			<field name="post_edit_user">0</field>
+			<field name="post_ip">0000:0000:0000:0000:0000:ffff:d8ea:67e2</field>
+			<field name="post_user_anon"></field>
+			<field name="post_attachments"></field>
+			<field name="post_options"></field>
+		</item>
+		<item>
+			<field name="post_id">14</field>
+			<field name="post_entry"><![CDATA[[html]<p>sdsddf</p>[/html]]]></field>
+			<field name="post_thread">9</field>
+			<field name="post_forum">4</field>
+			<field name="post_status">0</field>
+			<field name="post_datestamp">1481913610</field>
+			<field name="post_user">0</field>
+			<field name="post_edit_datestamp">0</field>
+			<field name="post_edit_user">0</field>
+			<field name="post_ip">0000:0000:0000:0000:0000:ffff:d8ea:67e2</field>
+			<field name="post_user_anon"></field>
+			<field name="post_attachments"></field>
+			<field name="post_options"></field>
+		</item>
+		<item>
+			<field name="post_id">15</field>
+			<field name="post_entry"><![CDATA[[html]<p><strong>Lorem Ipsum</strong><span> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#039;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span><strong>Lorem Ipsum</strong><span> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#039;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>[/html]]]></field>
+			<field name="post_thread">8</field>
+			<field name="post_forum">4</field>
+			<field name="post_status">0</field>
+			<field name="post_datestamp">1481913717</field>
+			<field name="post_user">1</field>
+			<field name="post_edit_datestamp">0</field>
+			<field name="post_edit_user">0</field>
+			<field name="post_ip">0000:0000:0000:0000:0000:ffff:d5d7:530d</field>
+			<field name="post_user_anon"></field>
+			<field name="post_attachments"></field>
+			<field name="post_options"></field>
+		</item>
+		<item>
+			<field name="post_id">16</field>
+			<field name="post_entry"><![CDATA[[html]<blockquote>
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#039;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#039;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+<small><cite></cite></small>
+</blockquote>[/html]]]></field>
+			<field name="post_thread">8</field>
+			<field name="post_forum">4</field>
+			<field name="post_status">0</field>
+			<field name="post_datestamp">1481914172</field>
+			<field name="post_user">1</field>
+			<field name="post_edit_datestamp">0</field>
+			<field name="post_edit_user">0</field>
+			<field name="post_ip">0000:0000:0000:0000:0000:ffff:d5d7:530d</field>
+			<field name="post_user_anon"></field>
+			<field name="post_attachments"></field>
+			<field name="post_options"></field>
+		</item>
+		<item>
+			<field name="post_id">17</field>
+			<field name="post_entry"><![CDATA[Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#039;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.]]></field>
+			<field name="post_thread">9</field>
+			<field name="post_forum">4</field>
+			<field name="post_status">0</field>
+			<field name="post_datestamp">1481914202</field>
+			<field name="post_user">1</field>
+			<field name="post_edit_datestamp">0</field>
+			<field name="post_edit_user">0</field>
+			<field name="post_ip">0000:0000:0000:0000:0000:ffff:d5d7:530d</field>
+			<field name="post_user_anon"></field>
+			<field name="post_attachments"></field>
+			<field name="post_options"></field>
+		</item>
+		<item>
+			<field name="post_id">18</field>
+			<field name="post_entry"><![CDATA[Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#039;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#039;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.]]></field>
+			<field name="post_thread">9</field>
+			<field name="post_forum">4</field>
+			<field name="post_status">0</field>
+			<field name="post_datestamp">1481914512</field>
+			<field name="post_user">1</field>
+			<field name="post_edit_datestamp">0</field>
+			<field name="post_edit_user">0</field>
+			<field name="post_ip">0000:0000:0000:0000:0000:ffff:d5d7:530d</field>
+			<field name="post_user_anon"></field>
+			<field name="post_attachments"></field>
+			<field name="post_options"></field>
+		</item>
+		<item>
+			<field name="post_id">19</field>
+			<field name="post_entry">test foreve</field>
+			<field name="post_thread">2</field>
+			<field name="post_forum">3</field>
+			<field name="post_status">0</field>
+			<field name="post_datestamp">1481927411</field>
+			<field name="post_user">0</field>
+			<field name="post_edit_datestamp">0</field>
+			<field name="post_edit_user">0</field>
+			<field name="post_ip">0000:0000:0000:0000:0000:ffff:d8ea:67e2</field>
+			<field name="post_user_anon"></field>
+			<field name="post_attachments"></field>
+			<field name="post_options"></field>
+		</item>
+		<item>
+			<field name="post_id">20</field>
+			<field name="post_entry">test again forever</field>
+			<field name="post_thread">2</field>
+			<field name="post_forum">3</field>
+			<field name="post_status">0</field>
+			<field name="post_datestamp">1481927433</field>
+			<field name="post_user">0</field>
+			<field name="post_edit_datestamp">0</field>
+			<field name="post_edit_user">0</field>
+			<field name="post_ip">0000:0000:0000:0000:0000:ffff:d8ea:67e2</field>
+			<field name="post_user_anon"></field>
+			<field name="post_attachments"></field>
+			<field name="post_options"></field>
+		</item>
+		<item>
+			<field name="post_id">21</field>
+			<field name="post_entry"><![CDATA[[quote=Jimako]
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#039;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#039;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+[/quote]
+
+Test]]></field>
+			<field name="post_thread">9</field>
+			<field name="post_forum">4</field>
+			<field name="post_status">0</field>
+			<field name="post_datestamp">1486068655</field>
+			<field name="post_user">0</field>
+			<field name="post_edit_datestamp">0</field>
+			<field name="post_edit_user">0</field>
+			<field name="post_ip">0000:0000:0000:0000:0000:ffff:53a3:4bc0</field>
+			<field name="post_user_anon">Test by Moc</field>
+			<field name="post_attachments"></field>
+			<field name="post_options"></field>
+		</item>
+	</dbTable>
+	<dbTable name="forum_thread">
+		<item>
+			<field name="thread_id">1</field>
+			<field name="thread_name">test topic</field>
+			<field name="thread_forum_id">7</field>
+			<field name="thread_views">286</field>
+			<field name="thread_active">1</field>
+			<field name="thread_lastpost">1481555013</field>
+			<field name="thread_sticky">0</field>
+			<field name="thread_datestamp">1481488055</field>
+			<field name="thread_user">1</field>
+			<field name="thread_user_anon"></field>
+			<field name="thread_lastuser">1</field>
+			<field name="thread_lastuser_anon"></field>
+			<field name="thread_total_replies">1</field>
+			<field name="thread_options"></field>
+		</item>
+		<item>
+			<field name="thread_id">2</field>
+			<field name="thread_name">test test</field>
+			<field name="thread_forum_id">3</field>
+			<field name="thread_views">171</field>
+			<field name="thread_active">1</field>
+			<field name="thread_lastpost">1481927433</field>
+			<field name="thread_sticky">0</field>
+			<field name="thread_datestamp">1481489914</field>
+			<field name="thread_user">2</field>
+			<field name="thread_user_anon"></field>
+			<field name="thread_lastuser">2</field>
+			<field name="thread_lastuser_anon"></field>
+			<field name="thread_total_replies">2</field>
+			<field name="thread_options"></field>
+		</item>
+		<item>
+			<field name="thread_id">3</field>
+			<field name="thread_name">test</field>
+			<field name="thread_forum_id">6</field>
+			<field name="thread_views">112</field>
+			<field name="thread_active">1</field>
+			<field name="thread_lastpost">1481490078</field>
+			<field name="thread_sticky">0</field>
+			<field name="thread_datestamp">1481490078</field>
+			<field name="thread_user">2</field>
+			<field name="thread_user_anon"></field>
+			<field name="thread_lastuser">2</field>
+			<field name="thread_lastuser_anon"></field>
+			<field name="thread_total_replies">0</field>
+			<field name="thread_options"></field>
+		</item>
+		<item>
+			<field name="thread_id">4</field>
+			<field name="thread_name">test</field>
+			<field name="thread_forum_id">6</field>
+			<field name="thread_views">66</field>
+			<field name="thread_active">1</field>
+			<field name="thread_lastpost">1481490163</field>
+			<field name="thread_sticky">0</field>
+			<field name="thread_datestamp">1481490163</field>
+			<field name="thread_user">2</field>
+			<field name="thread_user_anon"></field>
+			<field name="thread_lastuser">2</field>
+			<field name="thread_lastuser_anon"></field>
+			<field name="thread_total_replies">0</field>
+			<field name="thread_options"></field>
+		</item>
+		<item>
+			<field name="thread_id">5</field>
+			<field name="thread_name">test</field>
+			<field name="thread_forum_id">6</field>
+			<field name="thread_views">126</field>
+			<field name="thread_active">1</field>
+			<field name="thread_lastpost">1481653473</field>
+			<field name="thread_sticky">0</field>
+			<field name="thread_datestamp">1481653473</field>
+			<field name="thread_user">0</field>
+			<field name="thread_user_anon">Test</field>
+			<field name="thread_lastuser">0</field>
+			<field name="thread_lastuser_anon">Test</field>
+			<field name="thread_total_replies">0</field>
+			<field name="thread_options"></field>
+		</item>
+		<item>
+			<field name="thread_id">6</field>
+			<field name="thread_name">Fotku, jinak nevěřím</field>
+			<field name="thread_forum_id">6</field>
+			<field name="thread_views">136</field>
+			<field name="thread_active">1</field>
+			<field name="thread_lastpost">1481907009</field>
+			<field name="thread_sticky">2</field>
+			<field name="thread_datestamp">1481653750</field>
+			<field name="thread_user">1</field>
+			<field name="thread_user_anon"></field>
+			<field name="thread_lastuser">2</field>
+			<field name="thread_lastuser_anon"></field>
+			<field name="thread_total_replies">2</field>
+			<field name="thread_options"></field>
+		</item>
+		<item>
+			<field name="thread_id">7</field>
+			<field name="thread_name">nothing</field>
+			<field name="thread_forum_id">4</field>
+			<field name="thread_views">127</field>
+			<field name="thread_active">1</field>
+			<field name="thread_lastpost">1481907304</field>
+			<field name="thread_sticky">0</field>
+			<field name="thread_datestamp">1481907304</field>
+			<field name="thread_user">2</field>
+			<field name="thread_user_anon"></field>
+			<field name="thread_lastuser">2</field>
+			<field name="thread_lastuser_anon"></field>
+			<field name="thread_total_replies">0</field>
+			<field name="thread_options"></field>
+		</item>
+		<item>
+			<field name="thread_id">8</field>
+			<field name="thread_name">test topic</field>
+			<field name="thread_forum_id">4</field>
+			<field name="thread_views">166</field>
+			<field name="thread_active">1</field>
+			<field name="thread_lastpost">1481914172</field>
+			<field name="thread_sticky">0</field>
+			<field name="thread_datestamp">1481910978</field>
+			<field name="thread_user">1</field>
+			<field name="thread_user_anon"></field>
+			<field name="thread_lastuser">1</field>
+			<field name="thread_lastuser_anon"></field>
+			<field name="thread_total_replies">5</field>
+			<field name="thread_options"></field>
+		</item>
+		<item>
+			<field name="thread_id">9</field>
+			<field name="thread_name">sddswds</field>
+			<field name="thread_forum_id">4</field>
+			<field name="thread_views">247</field>
+			<field name="thread_active">1</field>
+			<field name="thread_lastpost">1486068655</field>
+			<field name="thread_sticky">2</field>
+			<field name="thread_datestamp">1481913610</field>
+			<field name="thread_user">2</field>
+			<field name="thread_user_anon"></field>
+			<field name="thread_lastuser">0</field>
+			<field name="thread_lastuser_anon">Test by Moc</field>
+			<field name="thread_total_replies">3</field>
+			<field name="thread_options"></field>
+		</item>
+	</dbTable>
+	</database>
+</e107Export>

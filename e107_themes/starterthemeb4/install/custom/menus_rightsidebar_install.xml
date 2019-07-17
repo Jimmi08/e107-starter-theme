@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<e107Export version="2.2.1" timestamp="1560624634" >
+	<database>
+	<dbTable name="menus">
+		<item>
+			<field name="menu_id">1</field>
+			<field name="menu_name">contact_menu</field>
+			<field name="menu_location">1</field>
+			<field name="menu_order">1</field>
+			<field name="menu_class">0</field>
+			<field name="menu_pages"></field>
+			<field name="menu_path">contact/</field>
+			<field name="menu_layout"></field>
+			<field name="menu_parms"></field>
+		</item>
+		<item>
+			<field name="menu_id">2</field>
+			<field name="menu_name">search_menu</field>
+			<field name="menu_location">1</field>
+			<field name="menu_order">2</field>
+			<field name="menu_class">0</field>
+			<field name="menu_pages"></field>
+			<field name="menu_path">search_menu/</field>
+			<field name="menu_layout"></field>
+			<field name="menu_parms"></field>
+		</item>
+		<item>
+			<field name="menu_id">3</field>
+			<field name="menu_name">news_categories_menu</field>
+			<field name="menu_location">1</field>
+			<field name="menu_order">4</field>
+			<field name="menu_class">0</field>
+			<field name="menu_pages"></field>
+			<field name="menu_path">news/</field>
+			<field name="menu_layout"></field>
+			<field name="menu_parms"></field>
+		</item>
+		<item>
+			<field name="menu_id">4</field>
+			<field name="menu_name">news_months_menu</field>
+			<field name="menu_location">2</field>
+			<field name="menu_order">3</field>
+			<field name="menu_class">0</field>
+			<field name="menu_pages"></field>
+			<field name="menu_path">news/</field>
+			<field name="menu_layout"></field>
+			<field name="menu_parms">{
+    "showarchive": "1",
+    "showarchive__switch": "0",
+    "year": "2019"
+}</field>
+		</item>
+		<item>
+			<field name="menu_id">5</field>
+			<field name="menu_name">latestnews_menu</field>
+			<field name="menu_location">2</field>
+			<field name="menu_order">2</field>
+			<field name="menu_class">0</field>
+			<field name="menu_pages"></field>
+			<field name="menu_path">news/</field>
+			<field name="menu_layout"></field>
+			<field name="menu_parms"></field>
+		</item>
+		<item>
+			<field name="menu_id">6</field>
+			<field name="menu_name">news_archive_menu</field>
+			<field name="menu_location">1</field>
+			<field name="menu_order">1</field>
+			<field name="menu_class">0</field>
+			<field name="menu_pages"></field>
+			<field name="menu_path">news/</field>
+			<field name="menu_layout"></field>
+			<field name="menu_parms"></field>
+		</item>
+	</dbTable>
+	</database>
+</e107Export>
