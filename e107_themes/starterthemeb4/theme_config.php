@@ -32,14 +32,40 @@ class theme_config implements e_theme_config
 
 	function config()
 	{
-		// v2.1.4 format.
+		// v2.2.2  
+		$bootswatch = array(
+			"cerulean"=> 'Cerulean',
+			"cosmo"=> 'Cosmo',
+            "cyborg"=> 'Cyborg',
+            "darkly"=> 'Darkly',
+            "flatly"=> 'Flatly',
+            "journal"=> 'Journal',
+            "litera"=> 'Litera',
+            "lumen"=> 'Lumen',
+            "lux"=> 'Lux',
+            "materia"=> 'Materia', 
+            "minty"=> 'Minty', 
+            "pulse"=> 'Pulse', 
+            "sandstone"=> 'Sandstone',
+            "simplex"=> 'Simplex',
+            "sketchy"=> 'sketchy', 
+            "slate"=> 'Slate',
+            "solar"=> 'Solar',
+            "spacelab"=> 'Spacelab',
+            "superhero"=> 'Superhero',
+            "united"=> 'United',
+            "yeti"=> 'Yeti',
+		);
+		
+		$previewLink = " <a class='btn btn-default btn-secondary e-modal' data-modal-caption=\"Use the 'Themes' menu to view the selection.\" href='http://bootswatch.com/default/'>".LAN_PREVIEW."</a>";
 
 		$fields = array(
-			'map'  	=> array('title' => LAN_THEMEPREF_03, 'type'=>'textarea', 'writeParms'=>array('size'=>'block-level'),'help'=>''),	
+			'bootswatch'        => array('title'=>LAN_THEMEPREF_03, 'type'=>'dropdown', 'writeParms'=>array('optArray'=> $bootswatch, 'post'=>$previewLink, 'default'=>LAN_DEFAULT)),
+			'cardmenu_look' => array('title' => LAN_THEMEPREF_04, 'type'=>'boolean', 'writeParms'=>array(),'help'=>''),			
+			'login_iframe' => array('title' => LAN_THEMEPREF_06, 'type'=>'boolean', 'writeParms'=>array(),'help'=>''), 	
+			'map'  	=> array('title' => LAN_THEMEPREF_05, 'type'=>'textarea', 'writeParms'=>array('size'=>'block-level'),'help'=>''),	
 			'inlinecss'  	=> array('title' => LAN_THEMEPREF_01, 'type'=>'textarea', 'writeParms'=>array('size'=>'block-level'),'help'=>''),
 			'inlinejs'  	=> array('title' => LAN_THEMEPREF_02, 'type'=>'textarea', 'writeParms'=>array('size'=>'block-level'),'help'=>''),	
-			'cardmenu_look' => array('title' => LAN_THEMEPREF_04, 'type'=>'boolean', 'writeParms'=>array('default'=>1),'help'=>''),			
- 	
 		);
 		return $fields;
 	}

@@ -16,8 +16,11 @@ $(document).ready(function() {
     
     $('#forum-viewforum').find('ul.dropdown-menu').each(function() {
   	 $(this).addClass('dropdown-menu-right');
-  	} );  
-  	
+  	} ); 
+    
+    $('.btn-group').find('ul.dropdown-menu li').each(function() {
+  	 $(this).addClass('dropdown-item');
+  	} ); 
   	
     // hide #back-top first
     $("#back-top").hide();
