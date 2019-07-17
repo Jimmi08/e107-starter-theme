@@ -2,13 +2,15 @@
 
 if (!defined('e107_INIT')) { exit; }    
 
-e107::themeLan('admin','bootstrap4', true);
+$sitetheme = e107::getPref('sitetheme');
+
+e107::themeLan('admin', $sitetheme, true);
 
 if(isset($_POST['importThemeDemo']))
 {
 	$xmlArray = array();
 	e107::getDebug()->log("Retrieving demo data from xml file");
-	$themepath = e_THEME."bootstrap4/install/install.xml"; 
+	$themepath = e_THEME.$sitetheme."/install/install.xml";
 	$xmlArray = e107::getSingleton('xmlClass')->loadXMLfile($themepath); 
 	$ret = e107::getSingleton('xmlClass')->e107Import($xmlArray);
 	if($ret)

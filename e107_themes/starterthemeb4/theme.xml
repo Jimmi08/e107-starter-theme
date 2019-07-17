@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <e107Theme name="Bootstrap 4" version="1.1" date="2019-07-17" compatibility="2.0">
-	<author name ="e107 Inc" email="e107inc@something.com" url="http://e107.org" />
-	<summary>Bootstrap4 generic theme (under development)</summary>
-	<description>For testing only</description>
+	<author name ="Jimako" email="jimako@jimako.sk" url="https://www.e107sk.com/" />
+	<summary>Bootstrap4 Starter theme</summary>
+	<description>Bootstrap4 Starter theme</description>
 	<category>generic</category>
 	<plugins>
+		<plugin name='jmcore' />
+		<plugin name='jmelements' />
+		<plugin name='jmtheme3' />
 		<plugin name='social' url='core' />
 		<plugin name='featurebox' url='core' />
 	</plugins>
 	<keywords>
 		<word>bootstrap</word>
-		<word>clean</word>
+		<word>starter</word>
 	</keywords>
 	<libraries>
 		<library name="bootstrap" version="4" scope="all"/>
@@ -23,6 +26,9 @@
 		<image>preview_frontend.png</image>
 	</screenshots>
 	<layouts>
+		<layout name='presentation' title='Presentation Page' >
+			<custompages>presentation</custompages>
+		</layout>
 		<layout name='home' title='Home Page' >
 			<custompages>FRONTPAGE</custompages>
 		</layout>
