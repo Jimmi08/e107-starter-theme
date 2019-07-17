@@ -40,11 +40,14 @@ if($inlinejs)
 e107::js("theme", 'custom.js', 'jquery');
 
 $login_iframe  = e107::pref('theme', 'login_iframe', false);
-if(THEME_LAYOUT == "singlelogin" && $login_iframe )  {
-  define('e_IFRAME','0');  
+if(THEME_LAYOUT == "singlelogin")  {
+   if($login_iframe) { define('e_IFRAME','0');  }
+   else { define('e_IFRAME','1'); }
 }
-if(THEME_LAYOUT == "singlesignup" && $login_iframe )  {
-  define('e_IFRAME','0');  
+
+if(THEME_LAYOUT == "singlesignup" )  {
+   if($login_iframe) { define('e_IFRAME','0');  }
+   else { define('e_IFRAME','1'); }
 }
 
 	class bootstrap4_theme
