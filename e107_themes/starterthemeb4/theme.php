@@ -10,7 +10,6 @@ e107::lan('theme');
 e107::meta('viewport', 'width=device-width, initial-scale=1.0');
 //e107::meta('apple-mobile-web-app-capable','yes');
 
-
 $bootswatch = e107::pref('theme', 'bootswatch', false);
 if($bootswatch) {
 	e107::css('url', 'https://bootswatch.com/4/' . $bootswatch . '/bootstrap.min.css');
@@ -27,6 +26,16 @@ if($inlinejs)
 {
 	e107::js("footer-inline", $inlinejs);
 }
+
+//e107::css('url', 	'');
+//e107::css('url', 	'');
+//e107::css('theme', 	'');
+//e107::css('theme', 	'');
+
+//e107::js("theme", 	'', 'jquery');
+//e107::js("theme", 	'', 'jquery');
+//e107::js("theme", 	'', 'jquery'); 
+//e107::js("theme", 	'custom.js', 'jquery'); 
 
 e107::js("theme", 'custom.js', 'jquery');
 
@@ -64,7 +73,7 @@ if(THEME_LAYOUT == "singlesignup" && $login_iframe )  {
 			
 			//this should be displayed only in e_debug mode
 			
-            echo "\n<!-- tablestyle initial:  style=" . $style . "  mode=" . $mode . "  UniqueId=" . varset($options['uniqueId']) . " -->\n\n";
+      echo "\n<!-- tablestyle initial:  style=" . $style . "  mode=" . $mode . "  UniqueId=" . varset($options['uniqueId']) . " -->\n\n";
 
 
 			if($mode == 'wmessage' OR $mode == 'wm')
