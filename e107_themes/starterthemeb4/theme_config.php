@@ -10,7 +10,7 @@ if(isset($_POST['importThemeDemo']))
 {
 	$xmlArray = array();
 	e107::getDebug()->log("Retrieving demo data from xml file");
-	$themepath = e_THEME.$sitetheme."/install/install.xml";
+	$themepath = e_THEME.$sitetheme."/install/install.xml"; 
 	$xmlArray = e107::getSingleton('xmlClass')->loadXMLfile($themepath); 
 	$ret = e107::getSingleton('xmlClass')->e107Import($xmlArray);
 	if($ret)
@@ -22,16 +22,17 @@ if(isset($_POST['importThemeDemo']))
 	$mes->render();
 }
 
-// Dummy Theme Configuration File.
+ 
 class theme_config implements e_theme_config
 {
 
+  var $filter_color = '';
+
 	function __construct()
 	{
- 
+	$this->filter_colors = "purple,blue,green,orange,red,rose"; 
 	}
-
-
+ 
 	function config()
 	{
 		// v2.2.2  
@@ -58,6 +59,8 @@ class theme_config implements e_theme_config
             "united"=> 'United',
             "yeti"=> 'Yeti',
 		);
+	 
+ 
 		
 		$previewLink = " <a class='btn btn-default btn-secondary e-modal' data-modal-caption=\"Use the 'Themes' menu to view the selection.\" href='http://bootswatch.com/default/'>".LAN_PREVIEW."</a>";
 
@@ -65,6 +68,9 @@ class theme_config implements e_theme_config
 			'bootswatch'        => array('title'=>LAN_THEMEPREF_03, 'type'=>'dropdown', 'writeParms'=>array('optArray'=> $bootswatch, 'post'=>$previewLink, 'default'=>LAN_DEFAULT)),
 			'cardmenu_look' => array('title' => LAN_THEMEPREF_04, 'type'=>'boolean', 'writeParms'=>array(),'help'=>''),			
 			'login_iframe' => array('title' => LAN_THEMEPREF_06, 'type'=>'boolean', 'writeParms'=>array(),'help'=>''), 	
+			'signup_extended' => array('title' => LAN_THEMEPREF_07, 'type'=>'boolean', 'writeParms'=>array(),'help'=>''),
+			'filter_color' => array('title' => LAN_THEMEPREF_08, 'data'=>'str', 'noedit'=>true, 'type' => 'tags',
+			 'writeParms'=>array('default'=>$this->filter_colors, 'size'=>'block-level') ),		
 			'map'  	=> array('title' => LAN_THEMEPREF_05, 'type'=>'textarea', 'writeParms'=>array('size'=>'block-level'),'help'=>''),	
 			'inlinecss'  	=> array('title' => LAN_THEMEPREF_01, 'type'=>'textarea', 'writeParms'=>array('size'=>'block-level'),'help'=>''),
 			'inlinejs'  	=> array('title' => LAN_THEMEPREF_02, 'type'=>'textarea', 'writeParms'=>array('size'=>'block-level'),'help'=>''),	

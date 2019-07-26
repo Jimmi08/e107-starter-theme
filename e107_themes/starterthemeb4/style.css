@@ -2,7 +2,9 @@ body {
   padding-top: 56px;
 }
 
-body.layout-home {
+body.layout-home,
+body.layout-presentation
+ {
   padding-top: 0px;
 }
 
@@ -10,11 +12,21 @@ body.layout-singlelogin,
 body.layout-singlesignup 
  {
   padding-top: 0px;
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  justify-content: space-between
 }
+
+.signup-page .page-header { 
+    top: 0px;
+    position: absolute;
+    width: 100%;
+}
+
+
+#fpw-page {
+  min-height: 75vh;
+  height: auto;
+  display: inherit;
+}
+
 
 /* fix for message box */
 .s-message.fade {
@@ -110,5 +122,9 @@ ul.social-buttons li a {
     margin-bottom: initial;  
 }
 
+/* fix for signup template, still table layout */
+.forumheader3 .checkbox {
+    width: 100%;  
+}
 
 /* CUSTOM Responsive Styles */
