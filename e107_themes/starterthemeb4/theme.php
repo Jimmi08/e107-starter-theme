@@ -5,11 +5,18 @@ if(!defined('e107_INIT'))
 	exit();
 }
 
+////// Multilanguages/ /////////////////////////////////////////////////////////
+
 e107::lan('theme');
+
+////// Theme meta tags /////////////////////////////////////////////////////////
 
 e107::meta('viewport', 'width=device-width, initial-scale=1.0');
 //e107::meta('apple-mobile-web-app-capable','yes');
 
+////////////////////////////////////////////////////////////////////////////////
+
+//// css and js from theme preferencies ////////////////////////////////////////
 $bootswatch = e107::pref('theme', 'bootswatch', false);
 if($bootswatch) {
 	e107::css('url', 'https://bootswatch.com/4/' . $bootswatch . '/bootstrap.min.css');
@@ -27,6 +34,10 @@ if($inlinejs)
 	e107::js("footer-inline", $inlinejs);
 }
 
+////////////////////////////////////////////////////////////////////////////////
+
+//// HTML assests //////////////////////////////////////////////////////////////
+
 //e107::css('url', 	'');
 //e107::css('url', 	'');
 //e107::css('theme', 	'');
@@ -37,7 +48,15 @@ if($inlinejs)
 //e107::js("theme", 	'', 'jquery'); 
 //e107::js("theme", 	'custom.js', 'jquery'); 
 
+
+//// Custom fixes //////////////////////////////////////////////////////////////
+
 e107::js("theme", 'custom.js', 'jquery');
+
+////////////////////////////////////////////////////////////////////////////////
+
+ 
+//// Login adn Register settings ///////////////////////////////////////////////
 
 $login_iframe  = e107::pref('theme', 'login_iframe', false);
 if(THEME_LAYOUT == "singlelogin")  {
@@ -45,14 +64,22 @@ if(THEME_LAYOUT == "singlelogin")  {
    else { define('e_IFRAME','1'); }
 }
 
-if(THEME_LAYOUT == "singlesignup" )  {
-   if($login_iframe) { define('e_IFRAME','0');  }
-   else { define('e_IFRAME','1'); }
-}
+////////////////////////////////////////////////////////////////////////////////
 
 	class bootstrap4_theme
 	{
 
+		var $themePrefs = array();
+		var $welcometext = '';
+	
+	  function __construct() {
+		    $this->themePrefs = e107::pref('theme');
+		    
+		    $tpl = '{LAYOUT_ELEMENT: element=left_text}';
+		    $this->welcometext = e107::getParser()->parseTemplate($tpl);
+	 
+		}
+	
 		/**
 		 * @param string $text
 		 * @return string without p tags added always with bbcodes
@@ -96,22 +123,25 @@ if(THEME_LAYOUT == "singlesignup" )  {
 				$style = 'listgroup';
 			}
     
-      // in iframe SETSTYLE is ignored
-			if($mode === 'login_page'  )
-			{                  
-				$style = 'singlelogin';
+//// Login adn Register settings ///////////////////////////////////////////////
+		if($mode === 'login_page'  )
+		{                  
+			$style = 'singlelogin';
+		}
+		if($mode === 'fpw'  )
+		{                  
+			$style = 'singlelogin';
+		}
+
+		if($mode === 'signup' OR   $mode === 'coppa' )
+		{                  
+			$style = 'singlelogin';
+			
+			if($this->themePrefs['signup_extended'])  {
+			    $style = 'signup_extended';
 			}
-			if($mode === 'fpw'  )
-			{                  
-				$style = 'singlelogin';
-			}
-			if($mode === 'coppa'  )
-			{                  
-				$style = 'singlelogin';
-			}
-			if($mode === 'signup'  )
-			{                  
-				$style = 'singlelogin';
+		}
+////////////////////////////////////////////////////////////////////////////////
 			}      
       
             			
@@ -231,6 +261,30 @@ if(THEME_LAYOUT == "singlesignup" )  {
   			        }
   					echo '</div></div>';
             echo '</div></div>';
+  					break;                
+         }
+         
+          case 'signup_extended': {   
+         		echo '
+						 <div class="container">
+						 <div class="row">
+						 <div class="col-lg-6 col-md-6 col-sm-7 col-12 ml-auto"><div class="info info-horizontal">
+						 '.$this->welcometext.'
+            </div>';
+					  echo '</div>';
+					  echo '<div class="col-lg-6 col-md-6 col-sm-5 col-12 mr-auto">' ;
+            echo '<div class="card card-register">
+						';
+  					if(!empty($caption))
+  					{
+  						echo '<h3 class="card-title text-center">' . $caption . '</h2>';
+  					}	
+						echo ' ';						       
+  					echo $text;    
+
+  					echo ' 
+					 
+   				  </div></div></div></div>';
   					break;                
          }
 
