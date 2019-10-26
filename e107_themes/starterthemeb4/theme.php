@@ -65,65 +65,53 @@ if(THEME_LAYOUT == "singlelogin")  {
 }
 
 ////////////////////////////////////////////////////////////////////////////////
+class bootstrap4_theme
+{
 
-	class bootstrap4_theme
+	/**
+	 * @param string $text
+	 * @return string without p tags added always with bbcodes
+	 * note: this solves W3C validation issue and CSS style problems
+	 * use this carefully, mainly for custom menus, let decision on theme developers
+	 */
+
+	function remove_ptags($text = '') // FIXME this is a bug in e107 if this is required.
 	{
 
-		var $themePrefs = array();
-		var $welcometext = '';
-	
-	  function __construct() {
-		    $this->themePrefs = e107::pref('theme');
-		    
-		    $tpl = '{LAYOUT_ELEMENT: element=left_text}';
-		    $this->welcometext = e107::getParser()->parseTemplate($tpl);
-	 
-		}
-	
-		/**
-		 * @param string $text
-		 * @return string without p tags added always with bbcodes
-		 * note: this solves W3C validation issue and CSS style problems
-		 * use this carefully, mainly for custom menus, let decision on theme developers
-		 */
+		$text = str_replace(array("<!-- bbcode-html-start --><p>", "</p><!-- bbcode-html-end -->"), "", $text);
 
-		function remove_ptags($text = '') // FIXME this is a bug in e107 if this is required.
+		return $text;
+	}
+
+
+	function tablestyle($caption, $text, $mode, $options = array())
+	{
+
+		$style = varset($options['setStyle'], 'default');
+		
+		//this should be displayed only in e_debug mode
+		
+		echo "\n<!-- tablestyle initial:  style=" . $style . "  mode=" . $mode . "  UniqueId=" . varset($options['uniqueId']) . " -->\n\n";
+
+
+		if($mode == 'wmessage' OR $mode == 'wm')
 		{
-
-			$text = str_replace(array("<!-- bbcode-html-start --><p>", "</p><!-- bbcode-html-end -->"), "", $text);
-
-			return $text;
+			$style = 'wmessage';
 		}
 
-
-		function tablestyle($caption, $text, $mode, $options = array())
+		
+		if($style === 'listgroup' && empty($options['list']))
 		{
-
-			$style = varset($options['setStyle'], 'default');
-			
-			//this should be displayed only in e_debug mode
-			
-      echo "\n<!-- tablestyle initial:  style=" . $style . "  mode=" . $mode . "  UniqueId=" . varset($options['uniqueId']) . " -->\n\n";
+			$style = 'cardmenu';
+		}
 
 
-			if($mode == 'wmessage' OR $mode == 'wm')
-			{
-				$style = 'wmessage';
-			}
- 
-			
-			if($style === 'listgroup' && empty($options['list']))
-			{
-				$style = 'cardmenu';
-			}
+		if($style === 'cardmenu' && !empty($options['list']))
+		{
+			$style = 'listgroup';
+		}
 
- 
-			if($style === 'cardmenu' && !empty($options['list']))
-			{
-				$style = 'listgroup';
-			}
-    
-//// Login adn Register settings ///////////////////////////////////////////////
+		// in iframe SETSTYLE is ignored
 		if($mode === 'login_page'  )
 		{                  
 			$style = 'singlelogin';
@@ -132,176 +120,149 @@ if(THEME_LAYOUT == "singlelogin")  {
 		{                  
 			$style = 'singlelogin';
 		}
-
-		if($mode === 'signup' OR   $mode === 'coppa' )
+		if($mode === 'coppa'  )
 		{                  
 			$style = 'singlelogin';
-			
-			if($this->themePrefs['signup_extended'])  {
-			    $style = 'signup_extended';
-			}
 		}
-////////////////////////////////////////////////////////////////////////////////
-			}      
-      
-            			
-			/* Changing card look via prefs */
-			if(!e107::pref('theme', 'cardmenu_look') && $style == 'cardmenu')
-			{
-				$style = 'menu';
-			}
+		if($mode === 'signup'  )
+		{                  
+			$style = 'singlelogin';
+		}      
+	
+					
+		/* Changing card look via prefs */
+		if(!e107::pref('theme', 'cardmenu_look') && $style == 'cardmenu')
+		{
+			$style = 'menu';
+		}
 
-			echo "\n<!-- tablestyle:  style=" . $style . "  mode=" . $mode . "  UniqueId=" . varset($options['uniqueId']) . " -->\n\n";
+		echo "\n<!-- tablestyle:  style=" . $style . "  mode=" . $mode . "  UniqueId=" . varset($options['uniqueId']) . " -->\n\n";
 
-			echo "\n<!-- \n";
+		echo "\n<!-- \n";
 
-			echo json_encode($options, JSON_PRETTY_PRINT);
+		echo json_encode($options, JSON_PRETTY_PRINT);
 
-			echo "\n-->\n\n";
+		echo "\n-->\n\n";
 
-			switch($style)
-			{
+		switch($style)
+		{
 
-				/*  case 'home':
-					  echo $caption;
-					  echo $text;
-				  break;
-
-				  case 'menu':
-					  echo $caption;
-					  echo $text;
-				  break;
-
-				  case 'full':
-					  echo $caption;
-					  echo $text;
-				  break;
-		*/
-		
-				case 'wmessage':		
-		    echo '<div class="jumbotron"><div class="container text-center">';
-		        if(!empty($caption))
-		        {
-		          echo '<h1 class="display-4">'.$caption.'</h1>';
-		        }
-		       
-		    echo '<p class="lead">'.$this->remove_ptags($text).'</p>';
-		    echo '</div></div>';
-        	break;
-    
-				case 'bare':
-					echo $this->remove_ptags($text);
-					break;
-
-
-				case 'nocaption':
-				case 'main':
-					echo $text;;
-					break;
-
+			/*  case 'home':
+					echo $caption;
+					echo $text;
+				break;
 
 				case 'menu':
-					echo '<div class=" mb-4">';
-					if(!empty($caption))
-					{
-						echo '<h5 >' . $caption . '</h5>';
-					}
+					echo $caption;
 					echo $text;
-					echo '</div>';
-					break;
+				break;
 
-
-				case 'cardmenu':
-					echo '<div class="card mb-4">';
-					if(!empty($caption))
-					{
-						echo '<h5 class="card-header">' . $caption . '</h5>';
-					}
-					echo '<div class="card-body">';
+				case 'full':
+					echo $caption;
 					echo $text;
-					echo '</div>
-						</div>';
-					break;
-
-
-				case 'listgroup': 
-					echo '<div class="card mb-4">';
-					if(!empty($caption))
-					{
-						echo '<h5 class="card-header">' . $caption . '</h5>';
-					}
-					echo $text;
-
-					if(!empty($options['footer'])) // XXX @see news-months menu.
-			        {
-			            echo '<div class="card-footer">
-		                      '.$options['footer'].'
-		                    </div>';
-			        }
-
-
-					echo '</div>';
-					break;
-          
-         case 'singlelogin': {   
-         echo '<div class="container  justify-content-center text-center my-5" id="fpw-page">
-                 <div class="row  align-items-center">';
-          
-            echo '<div class="card card-signin col-md-6 offset-md-3 " id="login-template"><div class="card-body">';
-  					if(!empty($caption))
-  					{
-  						echo '<h5 class="card-title text-center">' . $caption . '</h5>';
-  					}
-  					echo $text;    
-  					if(!empty($options['footer'])) // XXX @see news-months menu.
-  			        {
-  			            echo '<div class="card-footer">
-  		                      '.$options['footer'].'
-  		                    </div>';
-  			        }
-  					echo '</div></div>';
-            echo '</div></div>';
-  					break;                
-         }
-         
-          case 'signup_extended': {   
-         		echo '
-						 <div class="container">
-						 <div class="row">
-						 <div class="col-lg-6 col-md-6 col-sm-7 col-12 ml-auto"><div class="info info-horizontal">
-						 '.$this->welcometext.'
-            </div>';
-					  echo '</div>';
-					  echo '<div class="col-lg-6 col-md-6 col-sm-5 col-12 mr-auto">' ;
-            echo '<div class="card card-register">
-						';
-  					if(!empty($caption))
-  					{
-  						echo '<h3 class="card-title text-center">' . $caption . '</h2>';
-  					}	
-						echo ' ';						       
-  					echo $text;    
-
-  					echo ' 
-					 
-   				  </div></div></div></div>';
-  					break;                
-         }
-
-			   default:
-
-					// default style
-					// only if this always work, play with different styles
-
-					if(!empty($caption))
-					{
-						echo '<div class="my-4">' . $caption . '</div>';
-					}
-					echo $text;
-
-					return;
+				break;
+			*/
+	
+			case 'wmessage':		
+			echo '<div class="jumbotron"><div class="container text-center">';
+			if(!empty($caption))
+			{
+				echo '<h1 class="display-4">'.$caption.'</h1>';
 			}
+			
+			echo '<p class="lead">'.$this->remove_ptags($text).'</p>';
+			echo '</div></div>';
+			break;
 
+			case 'bare':
+				echo $this->remove_ptags($text);
+				break;
+
+
+			case 'nocaption':
+			case 'main':
+				echo $text;;
+				break;
+
+
+			case 'menu':
+				echo '<div class=" mb-4">';
+				if(!empty($caption))
+				{
+					echo '<h5 >' . $caption . '</h5>';
+				}
+				echo $text;
+				echo '</div>';
+				break;
+
+
+			case 'cardmenu':
+				echo '<div class="card mb-4">';
+				if(!empty($caption))
+				{
+					echo '<h5 class="card-header">' . $caption . '</h5>';
+				}
+				echo '<div class="card-body">';
+				echo $text;
+				echo '</div>
+					</div>';
+				break;
+
+
+			case 'listgroup': 
+				echo '<div class="card mb-4">';
+				if(!empty($caption))
+				{
+					echo '<h5 class="card-header">' . $caption . '</h5>';
+				}
+				echo $text;
+
+				if(!empty($options['footer'])) // XXX @see news-months menu.
+				{
+					echo '<div class="card-footer">
+							'.$options['footer'].'
+						</div>';
+				}
+
+
+				echo '</div>';
+				break;
+		
+				case 'singlelogin': {   
+				echo '<div class="container  justify-content-center text-center my-5" id="fpw-page">
+						<div class="row  align-items-center">';
+				
+				echo '<div class="card card-signin col-md-6 offset-md-3 " id="login-template"><div class="card-body">';
+						if(!empty($caption))
+						{
+							echo '<h5 class="card-title text-center">' . $caption . '</h5>';
+						}
+						echo $text;    
+						if(!empty($options['footer'])) // XXX @see news-months menu.
+						{
+							echo '<div class="card-footer">
+									'.$options['footer'].'
+								</div>';
+						}
+						echo '</div></div>';
+				echo '</div></div>';
+						break;                
+				}
+
+				default:
+
+				// default style
+				// only if this always work, play with different styles
+
+				if(!empty($caption))
+				{
+					echo '<div class="my-4">' . $caption . '</div>';
+				}
+				echo $text;
+
+				return;
 		}
 
 	}
+
+}
