@@ -5,6 +5,11 @@ if(!defined('e107_INIT'))
 	exit();
 }
 
+////// not load backcompat.css   /////////////////////////////////////////////////
+
+//define("BOOTSTRAP", 	4);
+//define("CORE_CSS", false);
+
 ////// Multilanguages/ /////////////////////////////////////////////////////////
 
 e107::lan('theme');
@@ -12,17 +17,17 @@ e107::lan('theme');
 ////// Theme meta tags /////////////////////////////////////////////////////////
 
 e107::meta('viewport', 'width=device-width, initial-scale=1.0');
+//e107::meta('viewport', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0');
+
 //e107::meta('apple-mobile-web-app-capable','yes');
+ 
+//<meta http-equiv="X-UA-Compatible" content="IE=edge">    #4022
+//e107::meta(null, "IE=edge", array('http-equiv' => 'X-UA-Compatible', 'content' => "IE=edge"));
 
 ////////////////////////////////////////////////////////////////////////////////
 
 //// css and js from theme preferencies ////////////////////////////////////////
-$bootswatch = e107::pref('theme', 'bootswatch', false);
-if($bootswatch) {
-	e107::css('url', 'https://bootswatch.com/4/' . $bootswatch . '/bootstrap.min.css');
-	e107::css('url', 'https://bootswatch.com/4/' . $bootswatch . '/bootstrap.min.css');
-}
-
+ 
 $inlinecss = e107::pref('theme', 'inlinecss', false);
 if($inlinecss)
 {
@@ -34,7 +39,6 @@ if($inlinejs)
 	e107::js("footer-inline", $inlinejs);
 }
 
-////////////////////////////////////////////////////////////////////////////////
 
 //// HTML assests //////////////////////////////////////////////////////////////
 
@@ -48,6 +52,13 @@ if($inlinejs)
 //e107::js("theme", 	'', 'jquery'); 
 //e107::js("theme", 	'custom.js', 'jquery'); 
 
+
+//// examples for IE 9 fix    ///////////////////////////////////////////////////
+ 
+//e107::js('url','https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js','','2','<!--[if lt IE 9]>','');
+//e107::js('url','https://oss.maxcdn.com/respond/1.4.2/respond.min.js','','2','','<![endif]-->');
+//e107::js('url','https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js','','2','<!--[if lt IE 9]>','');
+//e107::js('theme','assets/js/respond.js','','2','','<![endif]-->');
 
 //// Custom fixes //////////////////////////////////////////////////////////////
 
