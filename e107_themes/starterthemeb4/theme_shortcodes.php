@@ -42,7 +42,7 @@ class theme_shortcodes extends e_shortcode
           
         if (is_readable(e_THEME.$this->sitetheme."/theme.html")) 
         {
-             $this->file_extension = ".html";
+             $this->file_extension = ".html";  //change to php if you use php code in header
   
         }
         else $this->file_extension = ".php";           
@@ -57,7 +57,7 @@ class theme_shortcodes extends e_shortcode
 	{    
 		$header = varset( $this->customlayout['layout_header'] , "header_default");	  
 		$headerpath = e_THEME. $this->sitetheme.'/headers/'.$header. $this->file_extension;
- 
+
 		if(file_exists($headerpath)) {    
 			$text = file_get_contents($headerpath);    	 
 			$text = e107::getParser()->parseTemplate($text);  

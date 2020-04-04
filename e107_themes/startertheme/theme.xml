@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<e107Theme name="Starter Bootstrap 3 theme" version="2.1git" date="2018-09-14" compatibility="2.9">
-	<author name ="Jimako"  url="https://www.e107.sk" />
+<e107Theme name="Starter Bootstrap 3 theme" version="2.0" date="2020-04-04" compatibility="2.3.0">
+	<author name ="Jimako"  url="https://www.e107sk.com" />
 	<summary>Starter Bootstrap 3 e107 theme</summary>
 	<description>a bootstrap 3 theme for the frontend</description>
 	<category>generic</category>
 	<plugins>
 		<plugin name='gallery' url='core' />
 		<plugin name='social' url='core' />
+		<plugin name='jmcore' url='https://www.e107sk.com/download/52/jm-core-plugin' />
 	</plugins>
 	<keywords>
 		<word>bootstrap</word>
@@ -39,6 +40,9 @@
 		</layout>
 		<layout name='sidebar_left' title='Blog sidebar-left' default='false' >
 			<custompages>/page</custompages>	
+		</layout>
+		<layout name='3columns' title='3 columns layout' default='false' >
+			<custompages></custompages>	
 		</layout>
 	</layouts>
 </e107Theme>
