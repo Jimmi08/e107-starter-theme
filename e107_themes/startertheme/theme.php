@@ -76,238 +76,138 @@ define('PRE_EXTENDEDSTRING', '<br />');
 // load translated strings
 e107::lan('theme');
 
-// applied before every layout.
-$LAYOUT['_header_'] = '
-<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="{SITEURL}">{BOOTSTRAP_BRANDING}</a>
-        </div>
-        <div class="navbar-collapse collapse {BOOTSTRAP_NAV_ALIGN}">
-        	{NAVIGATION=main}
-         	{BOOTSTRAP_USERNAV: placement=top}
-        </div><!--/.navbar-collapse -->
-      </div>
-    </div>
-
-  
-	
-';
-
-// applied after every layout. 
-$LAYOUT['_footer_'] = '<hr>
-{SETSTYLE=default}
-<footer>
-	<div class="container">
-		<div class="row">
-
-		</div>	 <!-- /row -->
-	</div> <!-- /container -->
-</footer>
-';
-
-
-
-// $LAYOUT is a combined $HEADER and $FOOTER, automatically split at the point of "{---}"
-
-$LAYOUT['homepage'] =  '
-<div class="container">  
-	{ALERTS} 
-</div>
-{SETSTYLE=jumbotron} 
-{WMESSAGE=force}    
-{SETSTYLE=default} 
-<div class="container">	 
-	{MENU=1} 
-	{---} 
-</div>
-<div class="container">  
-	<!-- Example row of columns -->  
-	<div class="row">    
-		{SETSTYLE=col-md-4}     
-		{MENU=2}    
-		{MENU=3}     
-		{MENU=4}   
-	</div>     
-	<div class="row">    
-		{SETSTYLE=col-md-4}     
-		{MENU=5}   
-	</div>  
-	{SETSTYLE=default}   
-	<div class="row" > 
-	  {MENU=6}  
-	</div>
-</div>
-';
  
 
-$LAYOUT['full'] = '  
-{SETSTYLE=default}
-<div class="container">	
-  {ALERTS}
-  {MENU=1}
-  {---}
-</div>';
-
-$LAYOUT['sidebar_right'] =  '   
-{SETSTYLE=default} 
-<div class="container">	   {ALERTS}   
-	<div class="row">    
-		<div class="col-xs-12 col-md-8">	    
-		 {---}     
-		</div>    
-		<div id="sidebar" class="col-xs-12 col-md-4">      
-			{SETSTYLE=menu}       
-			{MENU=1}       
-		</div>  
-	</div>
-</div>';
-
-$LAYOUT['sidebar_left'] =  '
-{SETSTYLE=default} 
-<div class="container">	   
-	{ALERTS}   
-	<div class="row">    
-		<div id="sidebar" class="col-xs-12 col-md-4">      
-			{SETSTYLE=menu}       
-			{MENU=1}       
-		</div>    
-		<div class="col-xs-12 col-md-8">	     
-			{---}     
-		</div>  
-	</div>
-</div>';
 
 
-/**
- * @param string $caption
- * @example  []Heading 1
- * @example  [Heading2] 
- * @return empty string if correct syntax is used
- */
-function checkcaption( $caption ) 
+ 
+////////////////////////////////////////////////////////////////////////////////
+class starter_theme
 {
-	// get rid of any leading and trailing spaces
-	$title = trim( $caption );
-	// check the first and last character, if [ and ] set the title to empty  - this always doesn't work because admin stuff in captions
-	if ( $title[0]== '[' && $title[strlen($title) - 1] == ']' ) $title = '';   
-	// so just put [] at the beginning of menu title
-	if ( $title[0]== '[' && $title[1] == ']' ) $title = '';  
-	return $title;
+     
+         
+     /**
+     * @param string $caption
+     * @example  []Heading 1
+     * @example  [Heading2] 
+     * @return empty string if correct syntax is used
+     */
+    function checkcaption( $caption ) 
+    {
+    	// get rid of any leading and trailing spaces
+    	$title = trim( $caption );
+    	// check the first and last character, if [ and ] set the title to empty  - this always doesn't work because admin stuff in captions
+    	if ( $title[0]== '[' && $title[strlen($title) - 1] == ']' ) $title = '';   
+    	// so just put [] at the beginning of menu title
+    	if ( $title[0]== '[' && $title[1] == ']' ) $title = '';  
+    	return $title;
+    } 
+
+    /**
+     * @param string $caption
+     * @param string $text
+     * @param string $id : id of the current render
+     * @param array $info : current style and other menu data. 
+     */
+    function tablestyle($caption, $text, $id='', $info=array()) 
+    {
+    //	global $style; // no longer needed. 
+    	
+    	$style = $info['setStyle'];
+    	
+    	echo "<!-- tablestyle: style=".$style." id=".$id." -->\n\n";
+    	
+    	$type = $style;
+      
+    	if(empty($caption))
+    	{
+    		$type = 'box';
+    	}
+    	
+      /* if no content, no display of html tags */
+    	if(empty($text))
+    	{
+    		return '';
+    	}
+      
+      /* displays only content */  
+    	if($style == 'none')
+    	{
+    		echo $text;
+    		return;
+    	}
+    	
+    	if($style == 'jumbotron')
+    	{
+    		echo '<div class="jumbotron">
+          	<div class="container">';
+            	if(!empty($caption))
+    	        {
+    	            echo '<h1>'.$caption.'</h1>';
+    	        }
+            echo '
+            	'.$text.'
+          	</div>
+        	</div>';	
+    		return;
+    	}
+    	
+    	if($style == 'col-md-4' || $style == 'col-md-6' || $style == 'col-md-8')
+    	{
+    		echo ' <div class="col-xs-12 '.$style.'">';
+    		
+    		if(!empty($caption))
+    		{
+                echo '<h2>'.$caption.'</h2>';
+    		}
+    
+    		echo '
+              '.$text.'
+            </div>';
+    		return;	
+    		
+    	}
+    		
+    	if($style == 'menu')
+    	{
+    		echo '<div class="panel panel-default">
+    	  <div class="panel-heading">'.$caption.'</div>
+    	  <div class="panel-body">
+    	   '.$text.'
+    	  </div>
+    	</div>';
+    		return;
+    		
+    	}	
+    
+    	if($style == 'portfolio')
+    	{
+    		 echo '
+    		 <div class="col-lg-4 col-md-4 col-sm-6">
+                '.$text.'
+    		</div>';	
+    		return;
+    	}
+    
+    
+    
+    	// default.
+    
+    	if(!empty($caption))
+    	{
+    		echo '<h2 class="caption">'.$caption.'</h2>';
+    	}
+    
+    	echo $text;
+    
+    
+    					
+    	return;
+    	
+    	
+    	
+    } 
 } 
- 
-
-/**
- * @param string $caption
- * @param string $text
- * @param string $id : id of the current render
- * @param array $info : current style and other menu data. 
- */
-function tablestyle($caption, $text, $id='', $info=array()) 
-{
-//	global $style; // no longer needed. 
-	
-	$style = $info['setStyle'];
-	
-	echo "<!-- tablestyle: style=".$style." id=".$id." -->\n\n";
-	
-	$type = $style;
-  
-	if(empty($caption))
-	{
-		$type = 'box';
-	}
-	
-  /* if no content, no display of html tags */
-	if(empty($text))
-	{
-		return '';
-	}
-  
-  /* displays only content */  
-	if($style == 'none')
-	{
-		echo $text;
-		return;
-	}
-	
-	if($style == 'jumbotron')
-	{
-		echo '<div class="jumbotron">
-      	<div class="container">';
-        	if(!empty($caption))
-	        {
-	            echo '<h1>'.$caption.'</h1>';
-	        }
-        echo '
-        	'.$text.'
-      	</div>
-    	</div>';	
-		return;
-	}
-	
-	if($style == 'col-md-4' || $style == 'col-md-6' || $style == 'col-md-8')
-	{
-		echo ' <div class="col-xs-12 '.$style.'">';
-		
-		if(!empty($caption))
-		{
-            echo '<h2>'.$caption.'</h2>';
-		}
-
-		echo '
-          '.$text.'
-        </div>';
-		return;	
-		
-	}
-		
-	if($style == 'menu')
-	{
-		echo '<div class="panel panel-default">
-	  <div class="panel-heading">'.$caption.'</div>
-	  <div class="panel-body">
-	   '.$text.'
-	  </div>
-	</div>';
-		return;
-		
-	}	
-
-	if($style == 'portfolio')
-	{
-		 echo '
-		 <div class="col-lg-4 col-md-4 col-sm-6">
-            '.$text.'
-		</div>';	
-		return;
-	}
-
-
-
-	// default.
-
-	if(!empty($caption))
-	{
-		echo '<h2 class="caption">'.$caption.'</h2>';
-	}
-
-	echo $text;
-
-
-					
-	return;
-	
-	
-	
-} 
- 
  
 // News item styling
 $NEWSSTYLE = '

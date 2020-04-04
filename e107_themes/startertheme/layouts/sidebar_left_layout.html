@@ -1,34 +1,13 @@
-
-<!-- Magic Shortcodes - proof of concept -->
-<!-- Enabled Debug in 'basic' mode to view all available types -->
-
-  <!-- Page Content -->
-  <div class="container">
-
-    <!-- Page Heading/Breadcrumbs -->
-    <h1 class="mt-4 mb-3">{---CAPTION---}
-      <small>{---TEXT---}</small>
-    </h1>
-
-    {---BREADCRUMB---}
-
-    <div class="row">
-
-		  <div class="col-md-3 mb-3 sidebar">
-			<div class="menu"> 
-				{SETSTYLE=cardmenu}
-				{MENU=1} 
-			</div>
-		</div>
-
-    <div class="col-md-9">
-		{ALERTS}
-		{SETSTYLE=main}
-		{---}
-    </div>		
-
-    </div>
-    <!-- /.row -->
-
-  </div>
-  <!-- /.container -->
+{SETSTYLE=default} 
+<div class="container">	   
+	{ALERTS}   
+	<div class="row">    
+		<div id="sidebar" class="col-xs-12 col-md-4">      
+			{SETSTYLE=menu}       
+			{MENU=1}       
+		</div>    
+		<div class="col-xs-12 col-md-8">	     
+			{---}     
+		</div>  
+	</div>
+</div>
