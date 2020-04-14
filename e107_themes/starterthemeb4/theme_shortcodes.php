@@ -60,7 +60,6 @@ class theme_shortcodes extends e_shortcode
 
 		if(file_exists($headerpath)) {    
 			$text = file_get_contents($headerpath);    	 
-			$text = e107::getParser()->parseTemplate($text);  
         } 
 	    else $text = '';
 		return $text;
@@ -76,10 +75,7 @@ class theme_shortcodes extends e_shortcode
 		$footer = varset( $this->customlayout['layout_footer'] , "footer_default");
 		$footerpath = e_THEME. $this->sitetheme.'/footers/'.$footer.$this->file_extension;
 		if(file_exists($footerpath)) {
-		    $text = file_get_contents($footerpath); 
-             if(USER_AREA AND !$_GET['configure']) { 
-						   $text = e107::getParser()->parseTemplate($text); 
-					   }     
+		    $text = file_get_contents($footerpath);   
 		} 
         else $text = '';
 		return $text;
