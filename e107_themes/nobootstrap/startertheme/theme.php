@@ -1,197 +1,174 @@
 <?php
 
-/**
- * e107 website system
- *
- * Copyright (C) 2008-2017 e107 Inc (e107.org)
- * Released under the terms and conditions of the
- * GNU General Public License (http://www.gnu.org/licenses/gpl.txt)
- *
- * @file
- * Bootstrap 3 Theme for e107 v2.x.
- */
- 
-
 if(!defined('e107_INIT'))
 {
-	exit;
+	exit();
 }
 
- 
-define('VIEWPORT', 		"width=device-width, initial-scale=1.0");
-/* example for set specific body class  */
-//define('BODYTAG', '<body class="body-class '.THEME_LAYOUT.'">');
+////// not load backcompat.css   /////////////////////////////////////////////////
 
+//define("BOOTSTRAP", 	4);
+//define("CORE_CSS", false);
 
- 
-// load translated strings
+////// Multilanguages/ /////////////////////////////////////////////////////////
+
 e107::lan('theme');
 
+////// Theme meta tags /////////////////////////////////////////////////////////
 
-// fix for alerts 
-e107::js("theme", "js/alert.js", 'jquery');
+e107::meta('viewport', 'width=device-width, initial-scale=1.0');
+//e107::meta('viewport', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0');
 
-// applied before every layout.
-$LAYOUT['_header_'] = '
-{NAVIGATION}';
-
-// applied after every layout. 
-$LAYOUT['_footer_'] = '
-{SETSTYLE=footer}
-<div>{MENU=31}</div>';
-
-
-
-// $LAYOUT is a combined $HEADER and $FOOTER, automatically split at the point of "{---}"
-
-$LAYOUT['homepage'] = '
-{SETSTYLE=homepage}
-{FEATUREBOX}
-<div>
-{ALERTS} 
-{MENU=1} 
-{---} 
-{MENU=2} 
-</div>
-';
+//e107::meta('apple-mobile-web-app-capable','yes');
  
+//<meta http-equiv="X-UA-Compatible" content="IE=edge">    #4022
+//e107::meta(null, "IE=edge", array('http-equiv' => 'X-UA-Compatible', 'content' => "IE=edge"));
 
-$LAYOUT['full'] = '  
-{SETSTYLE=full}
-<div>	
-  {ALERTS}
-  {MENU=3}
-  {---}
-  {MENU=4}
-</div>';
+////////////////////////////////////////////////////////////////////////////////
 
-$LAYOUT['sidebar_right'] =  '   
+//// css and js from theme preferencies ////////////////////////////////////////
  
-<div>	  
- {ALERTS}   
-	<div id="main">    
-		<div id="content">	
-     {SETSTYLE=main}    
-		 {---}     
-		</div>    
-		<div id="sidebar">      
-			{SETSTYLE=sidebar}       
-			{MENU=5}       
-		</div>  
-	</div>
-</div>';
-
-$LAYOUT['sidebar_left'] =  $LAYOUT['sidebar_right'];
-
-
-/**
- * @param string $caption
- * @example  []Heading 1
- * @example  [Heading2] 
- * @return empty string if correct syntax is used
- */
-function checkcaption( $caption ) 
+$inlinecss = e107::pref('theme', 'inlinecss', false);
+if($inlinecss)
 {
-	// get rid of any leading and trailing spaces
-	$title = trim( $caption );
-	// check the first and last character, if [ and ] set the title to empty  - this always doesn't work because admin stuff in captions
-	if ( $title[0]== '[' && $title[strlen($title) - 1] == ']' ) $title = '';   
-	// so just put [] at the beginning of menu title
-	if ( $title[0]== '[' && $title[1] == ']' ) $title = '';  
-	return $title;
-} 
- 
-
-/**
- * @param string $caption
- * @param string $text
- * @param string $id : id of the current render
- * @param array $info : current style and other menu data. 
- */
-function tablestyle($caption, $text, $id='', $info=array()) 
+	e107::css("inline", $inlinecss);
+}
+$inlinejs = e107::pref('theme', 'inlinejs');
+if($inlinejs)
 {
-//	global $style; // no longer needed. 
-	
-	$style = $info['setStyle'];
-	
-	echo "<!-- tablestyle: style=".$style." id=".$id." -->\n\n";
-	
-	$type = $style;
-  
-	if(empty($caption))
-	{
-		$type = 'box';
-	}
-	
-  /* if no content, no display of html tags */
-	if(empty($text))
-	{
-		return '';
-	}
-  
-  /* displays only content */  
-	if($style == 'none')
-	{
-		echo $text;
-		return;
-	}
-	
- 	
-	if($style == 'homepage')
-	{
-  	if(!empty($caption))
-  	{
-  		echo '<h2 class="caption">'.$caption.'</h2>';
-  	} 
-  	echo $text;
-		return;		
-	}	
-
-	if($style == 'full')
-	{
-  	if(!empty($caption))
-  	{
-  		echo '<h2 class="caption">'.$caption.'</h2>';
-  	} 
-  	echo $text;
-		return;		
-	}
-
-	if($style == 'main')
-	{
-  	if(!empty($caption))
-  	{
-  		echo '<h2 class="caption">'.$caption.'</h2>';
-  	} 
-  	echo $text;
-		return;		
-	}
-
-	if($style == 'sidebar')
-	{
-  	if(!empty($caption))
-  	{
-  		echo '<h2 class="caption">'.$caption.'</h2>';
-  	} 
-  	echo $text;
-		return;		
-	}
-	// default.
-
-	if(!empty($caption))
-	{
-		echo '<h2 class="caption">'.$caption.'</h2>';
-	}
-
-	echo $text;
+	e107::js("footer-inline", $inlinejs);
+}
 
 
-					
-	return;
-	
-	
-	
-} 
+//// Core fix //////////////////////////////////////////////////////////////
+e107::js("theme", "custom/alert.js", 'jquery');
+
+//// HTML assests //////////////////////////////////////////////////////////////
+
+//e107::css('url', 	'');
+//e107::css('url', 	'');
+//e107::css('theme', 	'');
+//e107::css('theme', 	'');
+
+//e107::js("theme", 	'', 'jquery');
+//e107::js("theme", 	'', 'jquery');
+//e107::js("theme", 	'', 'jquery'); 
+//e107::js("theme", 	'custom.js', 'jquery'); 
+
+
+//// examples for IE 9 fix    ///////////////////////////////////////////////////
  
+//e107::js('url','https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js','','2','<!--[if lt IE 9]>','');
+//e107::js('url','https://oss.maxcdn.com/respond/1.4.2/respond.min.js','','2','','<![endif]-->');
+//e107::js('url','https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js','','2','<!--[if lt IE 9]>','');
+//e107::js('theme','assets/js/respond.js','','2','','<![endif]-->');
+
+//// Custom fixes //////////////////////////////////////////////////////////////
+
+e107::js("theme", 'custom.js', 'jquery');
+
+////////////////////////////////////////////////////////////////////////////////
+
  
-?>
+//// Login adn Register settings ///////////////////////////////////////////////
+
+$login_iframe  = e107::pref('theme', 'login_iframe', false);
+if(THEME_LAYOUT == "singlelogin")  {
+   if($login_iframe) { define('e_IFRAME','0');  }
+   else { define('e_IFRAME','1'); }
+}
+
+////////////////////////////////////////////////////////////////////////////////
+class your_theme_folder_theme
+{
+
+    private $debug = false;
+	/**
+	 * @param string $text
+	 * @return string without p tags added always with bbcodes
+	 * note: this solves W3C validation issue and CSS style problems
+	 * use this carefully, mainly for custom menus, let decision on theme developers
+	 */
+
+	function remove_ptags($text = '') // FIXME this is a bug in e107 if this is required.
+	{
+
+		$text = str_replace(array("<!-- bbcode-html-start --><p>", "</p><!-- bbcode-html-end -->"), "", $text);
+
+		return $text;
+	}
+
+
+	function tablestyle($caption, $text, $mode, $options = array())
+	{
+
+		$style = varset($options['setStyle'], 'default');
+		
+		//this should be displayed only in e_debug mode
+		
+		echo "\n<!-- tablestyle initial:  style=" . $style . "  mode=" . $mode . "  UniqueId=" . varset($options['uniqueId']) . " -->\n\n";
+        
+        
+
+        switch($mode) 
+        {
+          case "wmessage":
+          case "wm":
+          $style = "wmessage";
+         
+        }
+        
+        
+		echo "\n<!-- tablestyle:  style=" . $style . "  mode=" . $mode . "  UniqueId=" . varset($options['uniqueId']) . " -->\n\n";
+
+		echo "\n<!-- \n";
+
+		echo json_encode($options, JSON_PRETTY_PRINT);
+
+		echo "\n-->\n\n";
+        
+        
+        
+ 		switch($style)
+		{
+        
+                case "default" :
+				if(!empty($caption))
+				{
+					echo '<h3 class="text-heading">' . $caption . '</h3>';
+				}
+				echo $text;
+                break;
+ 
+    			case 'nocaption':
+    			case 'main':
+    			echo $text;;
+    			break;
+                
+            	case 'bare':
+				echo $this->remove_ptags($text);
+				break;
+
+               	default:
+
+				// default style
+				// only if this always work, play with different styles
+
+				if(!empty($caption))
+				{
+					echo '<div class="my-4">' . $caption . '</div>';
+				}
+				echo $text;
+
+				return;
+        
+        }
+                              
+
+
+ 
+	 
+
+	}
+
+}
