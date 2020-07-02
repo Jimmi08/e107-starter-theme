@@ -1,0 +1,41 @@
+<body class="{LAYOUT_ID}"  id="page-top" {BODY_ONLOAD} >
+	<nav class="{REPLACE-CLASS_NAV}" id="mainNav">
+    	<div class="container">
+    		<a class="{REPLACE-CLASS_NAVBAR_BRAND}" href="{SITEURL}" title="{SITENAME}">{SITENAME}</a>
+    		<button class="{REPLACE-CLASS_NAV_BUTTON}" type="button" data-toggle="collapse" 
+    			data-target="#nav" 
+    			aria-controls="nav" 
+    			aria-expanded="false" 
+    			aria-label="Toggle navigation">
+    			{REPLACE-CODE_HAMBURGER_TEXT}
+    		</button>
+    	  	<div class="collapse navbar-collapse justify-content-between" id="nav">
+    			<ul class=" navbar-nav ml-auto my-2 my-lg-0  ">
+    				{NAVIGATION=main} {MEMBER_LOGIN}  {USERBOX}
+    			</ul> 
+    	  </div>
+    	</div>
+    </nav>	
+    {---LAYOUT---}
+	<footer class="footer text-center">
+		<div class="container">
+    		<div class="row">
+    				{SETSTYLE=footer-menu}
+    				<div class="col-lg-4 mb-5 mb-lg-0">{DEFAULTMENUAREA=100}{MENUAREA=100}</div>
+    				<div class="col-lg-4 mb-5 mb-lg-0">{DEFAULTMENUAREA=101}{MENUAREA=101}</div>
+    				<div class="col-lg-4">{DEFAULTMENUAREA=102}{MENUAREA=102}</div>
+    		</div>
+		</div>
+	</footer>
+	<section class="copyright py-4 text-center text-white">
+		<div class="container">
+		{SITEDISCLAIMER}
+		</div>
+	</section>
+    <div  id="back-top">
+        <a class="text-center text-white rounded" href="#page-top">
+        <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+</body>
+ 

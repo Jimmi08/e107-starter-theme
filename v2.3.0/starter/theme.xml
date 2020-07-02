@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e107Theme name="Starter" version="2.0.0" date="2020-07-02" compatibility="2.3">
+	<author name ="Jimako" email="jimako@e107sk.com" url="https://www.e107sk.com/" />
+	<summary>Bootstrap4 Starter theme</summary>
+	<description>Bootstrap4 Starter theme</description>
+	<category>generic</category>
+	<plugins>
+	</plugins>
+	<keywords>
+		<word>bootstrap</word>
+		<word>starter</word>
+	</keywords>
+	<libraries>
+		<library name="bootstrap" version="4" scope="all"/>
+		<library name="fontawesome" version="5" scope="all"/>
+	</libraries>
+	<stylesheets>
+		<css file="style_default.css" name="Default" exclude='bootstrap4'/>
+		<css file="style_green.css" name="Green" exclude='bootstrap4'/>
+	</stylesheets>
+	<screenshots>
+		<image>preview_frontend.jpg</image>
+	</screenshots>
+	<layouts>	
+    	<layout name='home' title='HomePage' >
+			<custompages>FRONTPAGE</custompages>
+		</layout>
+     	<layout name='full' title='Full width page' >
+			<custompages>forum.php  /forum/</custompages>
+		</layout>
+		<layout name='sidebar_right' title='Blog sidebar-right'>
+			<custompages>/news/ news.php</custompages>	
+		</layout>
+     	<layout name='singleform' title='Shadowed centered form card' >
+			<custompages>login.php signup.php fpw.php /signup/ /login/</custompages>
+		</layout>
+		<layout name='bare' title='Starter Bare template for development' >
+			<custompages>guide</custompages>
+		</layout>
+		<layout name='default' title='Default'  default='true' />
+	</layouts>
+	<themePrefs>
+		<pref name='custom_css'></pref>
+	</themePrefs>
+</e107Theme>
